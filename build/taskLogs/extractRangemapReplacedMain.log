@@ -1,0 +1,20 @@
+Symbol range map extraction starting
+Processing 18 files
+processing com\welclient\core\Config.java
+processing com\welclient\core\GerenciadorModulos.java
+processing com\welclient\core\SeuClient.java
+processing com\welclient\gui\TelaConfiguracao.java
+processing com\welclient\gui\TelaCores.java
+processing com\welclient\gui\TelaPosicoes.java
+processing com\welclient\handlers\KeyInputHandler.java
+processing com\welclient\handlers\RenderHandler.java
+processing com\welclient\mods\ModCPS.java
+processing com\welclient\mods\ModCoordenadas.java
+processing com\welclient\mods\ModDirecao.java
+processing com\welclient\mods\ModDisplayAlcance.java
+processing com\welclient\mods\ModFPS.java
+processing com\welclient\mods\ModHora.java
+processing com\welclient\mods\ModPing.java
+processing com\welclient\mods\ModPotions.java
+processing com\welclient\mods\ModStatusArmadura.java
+processing com\welclient\mods\ModTeclas.java

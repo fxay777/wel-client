@@ -1,0 +1,1343 @@
+Symbol range map extraction starting
+Processing 18 files
+processing com\welclient\core\Config.java
+@|com\welclient\core\Config.java|8|26|com.seuclient.core|package|com.seuclient.core|(file)
+Class Start: com.seuclient.core.Config
+   @|com\welclient\core\Config.java|175|188|mostrarTeclas|field|com.seuclient.core.Config|mostrarTeclas|
+   @|com\welclient\core\Config.java|223|233|mostrarFPS|field|com.seuclient.core.Config|mostrarFPS|
+   @|com\welclient\core\Config.java|268|278|mostrarCPS|field|com.seuclient.core.Config|mostrarCPS|
+   @|com\welclient\core\Config.java|313|334|mostrarStatusArmadura|field|com.seuclient.core.Config|mostrarStatusArmadura|
+   @|com\welclient\core\Config.java|369|390|mostrarDisplayAlcance|field|com.seuclient.core.Config|mostrarDisplayAlcance|
+   @|com\welclient\core\Config.java|425|443|mostrarCoordenadas|field|com.seuclient.core.Config|mostrarCoordenadas|
+   @|com\welclient\core\Config.java|478|489|mostrarPing|field|com.seuclient.core.Config|mostrarPing|
+   @|com\welclient\core\Config.java|524|535|mostrarHora|field|com.seuclient.core.Config|mostrarHora|
+   @|com\welclient\core\Config.java|571|585|mostrarDirecao|field|com.seuclient.core.Config|mostrarDirecao|
+   @|com\welclient\core\Config.java|620|634|mostrarPotions|field|com.seuclient.core.Config|mostrarPotions|
+   @|com\welclient\core\Config.java|713|723|posXTeclas|field|com.seuclient.core.Config|posXTeclas|
+   @|com\welclient\core\Config.java|752|762|posYTeclas|field|com.seuclient.core.Config|posYTeclas|
+   @|com\welclient\core\Config.java|792|799|posXFPS|field|com.seuclient.core.Config|posXFPS|
+   @|com\welclient\core\Config.java|828|835|posYFPS|field|com.seuclient.core.Config|posYFPS|
+   @|com\welclient\core\Config.java|864|871|posXCPS|field|com.seuclient.core.Config|posXCPS|
+   @|com\welclient\core\Config.java|900|907|posYCPS|field|com.seuclient.core.Config|posYCPS|
+   @|com\welclient\core\Config.java|936|948|posXArmadura|field|com.seuclient.core.Config|posXArmadura|
+   @|com\welclient\core\Config.java|978|990|posYArmadura|field|com.seuclient.core.Config|posYArmadura|
+   @|com\welclient\core\Config.java|1020|1031|posXAlcance|field|com.seuclient.core.Config|posXAlcance|
+   @|com\welclient\core\Config.java|1061|1072|posYAlcance|field|com.seuclient.core.Config|posYAlcance|
+   @|com\welclient\core\Config.java|1101|1111|posXCoords|field|com.seuclient.core.Config|posXCoords|
+   @|com\welclient\core\Config.java|1140|1150|posYCoords|field|com.seuclient.core.Config|posYCoords|
+   @|com\welclient\core\Config.java|1179|1187|posXPing|field|com.seuclient.core.Config|posXPing|
+   @|com\welclient\core\Config.java|1216|1224|posYPing|field|com.seuclient.core.Config|posYPing|
+   @|com\welclient\core\Config.java|1253|1261|posXHora|field|com.seuclient.core.Config|posXHora|
+   @|com\welclient\core\Config.java|1290|1298|posYHora|field|com.seuclient.core.Config|posYHora|
+   @|com\welclient\core\Config.java|1345|1353|corTexto|field|com.seuclient.core.Config|corTexto|
+   @|com\welclient\core\Config.java|1390|1398|corFundo|field|com.seuclient.core.Config|corFundo|
+   @|com\welclient\core\Config.java|1435|1446|corDestaque|field|com.seuclient.core.Config|corDestaque|
+   Method Start: init(Ljava/io/File;)V
+      @|com\welclient\core\Config.java|1489|1493|init|method|com.seuclient.core.Config|init|(Ljava/io/File;)V
+      @|com\welclient\core\Config.java|1494|1498|File|class|java.io.File
+      @|com\welclient\core\Config.java|1499|1512|arquivoConfig|param|com.seuclient.core.Config|init|(Ljava/io/File;)V|arquivoConfig|0
+      @|com\welclient\core\Config.java|1524|1537|Configuration|class|net.minecraftforge.common.config.Configuration
+      @|com\welclient\core\Config.java|1551|1564|Configuration|class|net.minecraftforge.common.config.Configuration
+      @|com\welclient\core\Config.java|1565|1578|arquivoConfig|param|com.seuclient.core.Config|init|(Ljava/io/File;)V|arquivoConfig|0
+      @|com\welclient\core\Config.java|1605|1609|load|method|net.minecraftforge.common.config.Configuration|load|()V
+      @|com\welclient\core\Config.java|1656|1669|mostrarTeclas|field|com.seuclient.core.Config|mostrarTeclas
+      @|com\welclient\core\Config.java|1679|1689|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|1755|1765|mostrarFPS|field|com.seuclient.core.Config|mostrarFPS
+      @|com\welclient\core\Config.java|1775|1785|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|1845|1855|mostrarCPS|field|com.seuclient.core.Config|mostrarCPS
+      @|com\welclient\core\Config.java|1865|1875|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|1935|1956|mostrarStatusArmadura|field|com.seuclient.core.Config|mostrarStatusArmadura
+      @|com\welclient\core\Config.java|1966|1976|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2062|2083|mostrarDisplayAlcance|field|com.seuclient.core.Config|mostrarDisplayAlcance
+      @|com\welclient\core\Config.java|2093|2103|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2189|2207|mostrarCoordenadas|field|com.seuclient.core.Config|mostrarCoordenadas
+      @|com\welclient\core\Config.java|2217|2227|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2303|2314|mostrarPing|field|com.seuclient.core.Config|mostrarPing
+      @|com\welclient\core\Config.java|2324|2334|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2396|2407|mostrarHora|field|com.seuclient.core.Config|mostrarHora
+      @|com\welclient\core\Config.java|2417|2427|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2490|2504|mostrarDirecao|field|com.seuclient.core.Config|mostrarDirecao
+      @|com\welclient\core\Config.java|2514|2524|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2592|2606|mostrarPotions|field|com.seuclient.core.Config|mostrarPotions
+      @|com\welclient\core\Config.java|2616|2626|getBoolean|method|net.minecraftforge.common.config.Configuration|getBoolean|(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+      @|com\welclient\core\Config.java|2709|2713|save|method|net.minecraftforge.common.config.Configuration|save|()V
+   Method End: init(Ljava/io/File;)V
+Class End  : com.seuclient.core.Config
+endProcessing com\welclient\core\Config.java
+
+processing com\welclient\core\GerenciadorModulos.java
+@|com\welclient\core\GerenciadorModulos.java|8|26|com.seuclient.core|package|com.seuclient.core|(file)
+Class Start: com.seuclient.core.GerenciadorModulos
+   @|com\welclient\core\GerenciadorModulos.java|335|344|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\core\GerenciadorModulos.java|345|347|mc|field|com.seuclient.core.GerenciadorModulos|mc|
+   @|com\welclient\core\GerenciadorModulos.java|350|359|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\core\GerenciadorModulos.java|360|372|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|com\welclient\core\GerenciadorModulos.java|395|405|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\core\GerenciadorModulos.java|406|417|teclaConfig|field|com.seuclient.core.GerenciadorModulos|teclaConfig|
+   Method Start: init()V
+      @|com\welclient\core\GerenciadorModulos.java|447|451|init|method|com.seuclient.core.GerenciadorModulos|init|()V
+      @|com\welclient\core\GerenciadorModulos.java|464|475|teclaConfig|field|com.seuclient.core.GerenciadorModulos|teclaConfig
+      @|com\welclient\core\GerenciadorModulos.java|482|492|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\core\GerenciadorModulos.java|520|528|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\core\GerenciadorModulos.java|529|539|KEY_RSHIFT|field|org.lwjgl.input.Keyboard|KEY_RSHIFT
+      @|com\welclient\core\GerenciadorModulos.java|564|617|net.minecraftforge.fml.client.registry.ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\core\GerenciadorModulos.java|618|636|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\core\GerenciadorModulos.java|637|648|teclaConfig|field|com.seuclient.core.GerenciadorModulos|teclaConfig
+   Method End: init()V
+   Method Start: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com\welclient\core\GerenciadorModulos.java|698|708|onKeyInput|method|com.seuclient.core.GerenciadorModulos|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com\welclient\core\GerenciadorModulos.java|709|733|InputEvent.KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|com\welclient\core\GerenciadorModulos.java|734|739|event|param|com.seuclient.core.GerenciadorModulos|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|com\welclient\core\GerenciadorModulos.java|755|766|teclaConfig|field|com.seuclient.core.GerenciadorModulos|teclaConfig
+      @|com\welclient\core\GerenciadorModulos.java|767|776|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|com\welclient\core\GerenciadorModulos.java|794|796|mc|field|com.seuclient.core.GerenciadorModulos|mc
+      @|com\welclient\core\GerenciadorModulos.java|797|813|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\core\GerenciadorModulos.java|818|852|com.seuclient.gui.TelaConfiguracao|class|com.seuclient.gui
+   Method End: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+Class End  : com.seuclient.core.GerenciadorModulos
+endProcessing com\welclient\core\GerenciadorModulos.java
+
+processing com\welclient\core\SeuClient.java
+@|com\welclient\core\SeuClient.java|8|26|com.seuclient.core|package|com.seuclient.core|(file)
+Class Start: com.seuclient.core.SeuClient
+   @|com\welclient\core\SeuClient.java|541|547|String|class|java.lang.String
+   @|com\welclient\core\SeuClient.java|548|553|MODID|field|com.seuclient.core.SeuClient|MODID|
+   @|com\welclient\core\SeuClient.java|593|599|String|class|java.lang.String
+   @|com\welclient\core\SeuClient.java|600|604|NOME|field|com.seuclient.core.SeuClient|NOME|
+   @|com\welclient\core\SeuClient.java|645|651|String|class|java.lang.String
+   @|com\welclient\core\SeuClient.java|652|658|VERSAO|field|com.seuclient.core.SeuClient|VERSAO|
+   @|com\welclient\core\SeuClient.java|711|720|SeuClient|class|com.seuclient.core.SeuClient
+   @|com\welclient\core\SeuClient.java|721|729|instance|field|com.seuclient.core.SeuClient|instance|
+   Method Start: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|774|781|preInit|method|com.seuclient.core.SeuClient|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|782|807|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+      @|com\welclient\core\SeuClient.java|808|813|event|param|com.seuclient.core.SeuClient|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      ERROR SimpleName: Config null
+      ERROR SimpleName: init null
+      @|com\welclient\core\SeuClient.java|837|842|event|param|com.seuclient.core.SeuClient|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|com\welclient\core\SeuClient.java|843|872|getSuggestedConfigurationFile|method|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|getSuggestedConfigurationFile|()Ljava/io/File;
+   Method End: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+   Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|926|930|init|method|com.seuclient.core.SeuClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|931|953|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|com\welclient\core\SeuClient.java|954|959|event|param|com.seuclient.core.SeuClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|com\welclient\core\SeuClient.java|971|985|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|com\welclient\core\SeuClient.java|986|995|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com\welclient\core\SeuClient.java|996|1004|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com\welclient\core\SeuClient.java|1009|1022|RenderHandler|class|RenderHandler
+      @|com\welclient\core\SeuClient.java|1035|1049|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|com\welclient\core\SeuClient.java|1050|1059|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com\welclient\core\SeuClient.java|1060|1068|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com\welclient\core\SeuClient.java|1073|1088|KeyInputHandler|class|KeyInputHandler
+      ERROR SimpleName: KeyInputHandler null
+      ERROR SimpleName: init null
+   Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+   Method Start: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|1174|1182|postInit|method|com.seuclient.core.SeuClient|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|com\welclient\core\SeuClient.java|1183|1209|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+      @|com\welclient\core\SeuClient.java|1210|1215|event|param|com.seuclient.core.SeuClient|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|com\welclient\core\SeuClient.java|1227|1233|System|class|java.lang.System
+      @|com\welclient\core\SeuClient.java|1234|1237|out|field|java.lang.System|out
+      @|com\welclient\core\SeuClient.java|1238|1245|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+   Method End: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+Class End  : com.seuclient.core.SeuClient
+endProcessing com\welclient\core\SeuClient.java
+
+processing com\welclient\gui\TelaConfiguracao.java
+@|com\welclient\gui\TelaConfiguracao.java|8|25|com.seuclient.gui|package|com.seuclient.gui|(file)
+Class Start: com.seuclient.gui.TelaConfiguracao
+   Method Start: initGui()V
+      @|com\welclient\gui\TelaConfiguracao.java|234|241|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+      @|com\welclient\gui\TelaConfiguracao.java|262|267|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaConfiguracao.java|295|301|height|field|net.minecraft.client.gui.GuiScreen|height
+      @|com\welclient\gui\TelaConfiguracao.java|329|339|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|340|343|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|348|357|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      @|com\welclient\gui\TelaConfiguracao.java|451|461|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|462|465|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|470|479|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      @|com\welclient\gui\TelaConfiguracao.java|572|582|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|583|586|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|591|600|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      @|com\welclient\gui\TelaConfiguracao.java|693|703|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|704|707|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|712|721|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      @|com\welclient\gui\TelaConfiguracao.java|830|840|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|841|844|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|849|858|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      @|com\welclient\gui\TelaConfiguracao.java|967|977|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|978|981|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|986|995|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      @|com\welclient\gui\TelaConfiguracao.java|1105|1115|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|1116|1119|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|1124|1133|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      @|com\welclient\gui\TelaConfiguracao.java|1229|1239|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|1240|1243|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|1248|1257|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      @|com\welclient\gui\TelaConfiguracao.java|1353|1363|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|1364|1367|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|1372|1381|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      @|com\welclient\gui\TelaConfiguracao.java|1483|1493|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaConfiguracao.java|1494|1497|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaConfiguracao.java|1502|1511|GuiButton|class|net.minecraft.client.gui.GuiButton
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+   Method End: initGui()V
+   Method Start: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaConfiguracao.java|1648|1663|actionPerformed|method|net.minecraft.client.gui.GuiScreen|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaConfiguracao.java|1664|1673|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaConfiguracao.java|1674|1680|button|param|com.seuclient.gui.TelaConfiguracao|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaConfiguracao.java|1700|1706|button|param|com.seuclient.gui.TelaConfiguracao|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaConfiguracao.java|1707|1709|id|field|net.minecraft.client.gui.GuiButton|id
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      @|com\welclient\gui\TelaConfiguracao.java|2816|2823|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+   Method End: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+   Method Start: drawScreen(IIF)V
+      @|com\welclient\gui\TelaConfiguracao.java|2868|2878|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaConfiguracao.java|2883|2889|mouseX|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaConfiguracao.java|2895|2901|mouseY|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaConfiguracao.java|2909|2921|partialTicks|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|partialTicks|2
+      @|com\welclient\gui\TelaConfiguracao.java|2933|2954|drawDefaultBackground|method|net.minecraft.client.gui.GuiScreen|drawDefaultBackground|()V
+      @|com\welclient\gui\TelaConfiguracao.java|2966|2984|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com\welclient\gui\TelaConfiguracao.java|2985|3000|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com\welclient\gui\TelaConfiguracao.java|3033|3038|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaConfiguracao.java|3075|3085|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaConfiguracao.java|3086|3092|mouseX|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaConfiguracao.java|3094|3100|mouseY|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaConfiguracao.java|3102|3114|partialTicks|param|com.seuclient.gui.TelaConfiguracao|drawScreen|(IIF)V|partialTicks|2
+   Method End: drawScreen(IIF)V
+Class End  : com.seuclient.gui.TelaConfiguracao
+endProcessing com\welclient\gui\TelaConfiguracao.java
+
+processing com\welclient\gui\TelaCores.java
+@|com\welclient\gui\TelaCores.java|8|25|com.seuclient.gui|package|com.seuclient.gui|(file)
+Class Start: com.seuclient.gui.TelaCores
+   Method Start: initGui()V
+      @|com\welclient\gui\TelaCores.java|222|229|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+      @|com\welclient\gui\TelaCores.java|242|252|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaCores.java|253|256|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaCores.java|261|270|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaCores.java|274|279|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaCores.java|291|297|height|field|net.minecraft.client.gui.GuiScreen|height
+      @|com\welclient\gui\TelaCores.java|329|335|corHex|method|com.seuclient.gui.TelaCores|corHex|(I)Ljava/lang/String;
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corTexto null
+      @|com\welclient\gui\TelaCores.java|364|374|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaCores.java|375|378|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaCores.java|383|392|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaCores.java|396|401|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaCores.java|413|419|height|field|net.minecraft.client.gui.GuiScreen|height
+      @|com\welclient\gui\TelaCores.java|449|455|corHex|method|com.seuclient.gui.TelaCores|corHex|(I)Ljava/lang/String;
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corDestaque null
+      @|com\welclient\gui\TelaCores.java|487|497|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaCores.java|498|501|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaCores.java|506|515|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaCores.java|519|524|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaCores.java|536|542|height|field|net.minecraft.client.gui.GuiScreen|height
+   Method End: initGui()V
+   Method Start: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaCores.java|614|629|actionPerformed|method|net.minecraft.client.gui.GuiScreen|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaCores.java|630|639|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaCores.java|640|646|button|param|com.seuclient.gui.TelaCores|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaCores.java|662|668|button|param|com.seuclient.gui.TelaCores|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaCores.java|669|671|id|field|net.minecraft.client.gui.GuiButton|id
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corTexto null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corTexto null
+      @|com\welclient\gui\TelaCores.java|786|792|button|param|com.seuclient.gui.TelaCores|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaCores.java|793|795|id|field|net.minecraft.client.gui.GuiButton|id
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corDestaque null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corDestaque null
+      @|com\welclient\gui\TelaCores.java|916|922|button|param|com.seuclient.gui.TelaCores|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaCores.java|923|925|id|field|net.minecraft.client.gui.GuiButton|id
+      @|com\welclient\gui\TelaCores.java|946|948|mc|field|net.minecraft.client.gui.GuiScreen|mc
+      @|com\welclient\gui\TelaCores.java|949|965|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\gui\TelaCores.java|970|986|TelaConfiguracao|class|TelaConfiguracao
+      @|com\welclient\gui\TelaCores.java|1029|1036|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+   Method End: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+   Method Start: drawScreen(IIF)V
+      @|com\welclient\gui\TelaCores.java|1077|1087|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaCores.java|1092|1098|mouseX|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaCores.java|1104|1110|mouseY|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaCores.java|1118|1130|partialTicks|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|partialTicks|2
+      @|com\welclient\gui\TelaCores.java|1142|1163|drawDefaultBackground|method|net.minecraft.client.gui.GuiScreen|drawDefaultBackground|()V
+      @|com\welclient\gui\TelaCores.java|1175|1193|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com\welclient\gui\TelaCores.java|1194|1209|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com\welclient\gui\TelaCores.java|1234|1239|width|field|net.minecraft.client.gui.GuiScreen|width
+      ERROR SimpleName: Config null
+      ERROR SimpleName: corTexto null
+      @|com\welclient\gui\TelaCores.java|1281|1291|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaCores.java|1292|1298|mouseX|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaCores.java|1300|1306|mouseY|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaCores.java|1308|1320|partialTicks|param|com.seuclient.gui.TelaCores|drawScreen|(IIF)V|partialTicks|2
+   Method End: drawScreen(IIF)V
+   Method Start: corHex(I)Ljava/lang/String;
+      @|com\welclient\gui\TelaCores.java|1349|1355|corHex|method|com.seuclient.gui.TelaCores|corHex|(I)Ljava/lang/String;
+      @|com\welclient\gui\TelaCores.java|1342|1348|String|class|java.lang.String
+      @|com\welclient\gui\TelaCores.java|1360|1363|cor|param|com.seuclient.gui.TelaCores|corHex|(I)Ljava/lang/String;|cor|0
+      @|com\welclient\gui\TelaCores.java|1382|1388|String|class|java.lang.String
+      @|com\welclient\gui\TelaCores.java|1389|1395|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      @|com\welclient\gui\TelaCores.java|1405|1408|cor|param|com.seuclient.gui.TelaCores|corHex|(I)Ljava/lang/String;|cor|0
+   Method End: corHex(I)Ljava/lang/String;
+Class End  : com.seuclient.gui.TelaCores
+endProcessing com\welclient\gui\TelaCores.java
+
+processing com\welclient\gui\TelaPosicoes.java
+@|com\welclient\gui\TelaPosicoes.java|8|25|com.seuclient.gui|package|com.seuclient.gui|(file)
+Class Start: com.seuclient.gui.TelaPosicoes
+   Method Start: initGui()V
+      @|com\welclient\gui\TelaPosicoes.java|225|232|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+      @|com\welclient\gui\TelaPosicoes.java|245|255|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaPosicoes.java|256|259|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaPosicoes.java|264|273|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaPosicoes.java|277|282|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaPosicoes.java|294|300|height|field|net.minecraft.client.gui.GuiScreen|height
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYTeclas null
+      @|com\welclient\gui\TelaPosicoes.java|389|399|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaPosicoes.java|400|403|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaPosicoes.java|408|417|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaPosicoes.java|421|426|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaPosicoes.java|438|444|height|field|net.minecraft.client.gui.GuiScreen|height
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYFPS null
+      @|com\welclient\gui\TelaPosicoes.java|519|529|buttonList|field|net.minecraft.client.gui.GuiScreen|buttonList
+      @|com\welclient\gui\TelaPosicoes.java|530|533|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\gui\TelaPosicoes.java|538|547|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaPosicoes.java|551|556|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaPosicoes.java|568|574|height|field|net.minecraft.client.gui.GuiScreen|height
+   Method End: initGui()V
+   Method Start: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaPosicoes.java|646|661|actionPerformed|method|net.minecraft.client.gui.GuiScreen|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V
+      @|com\welclient\gui\TelaPosicoes.java|662|671|GuiButton|class|net.minecraft.client.gui.GuiButton
+      @|com\welclient\gui\TelaPosicoes.java|672|678|button|param|com.seuclient.gui.TelaPosicoes|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaPosicoes.java|694|700|button|param|com.seuclient.gui.TelaPosicoes|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaPosicoes.java|701|703|id|field|net.minecraft.client.gui.GuiButton|id
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXTeclas null
+      @|com\welclient\gui\TelaPosicoes.java|798|804|button|param|com.seuclient.gui.TelaPosicoes|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaPosicoes.java|805|807|id|field|net.minecraft.client.gui.GuiButton|id
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXFPS null
+      @|com\welclient\gui\TelaPosicoes.java|896|902|button|param|com.seuclient.gui.TelaPosicoes|actionPerformed|(Lnet/minecraft/client/gui/GuiButton;)V|button|0
+      @|com\welclient\gui\TelaPosicoes.java|903|905|id|field|net.minecraft.client.gui.GuiButton|id
+      @|com\welclient\gui\TelaPosicoes.java|926|928|mc|field|net.minecraft.client.gui.GuiScreen|mc
+      @|com\welclient\gui\TelaPosicoes.java|929|945|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\gui\TelaPosicoes.java|950|966|TelaConfiguracao|class|TelaConfiguracao
+      @|com\welclient\gui\TelaPosicoes.java|1009|1016|initGui|method|net.minecraft.client.gui.GuiScreen|initGui|()V
+   Method End: actionPerformed(Lnet/minecraft/client/gui/GuiButton;)V
+   Method Start: drawScreen(IIF)V
+      @|com\welclient\gui\TelaPosicoes.java|1057|1067|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaPosicoes.java|1072|1078|mouseX|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaPosicoes.java|1084|1090|mouseY|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaPosicoes.java|1098|1110|partialTicks|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|partialTicks|2
+      @|com\welclient\gui\TelaPosicoes.java|1122|1143|drawDefaultBackground|method|net.minecraft.client.gui.GuiScreen|drawDefaultBackground|()V
+      @|com\welclient\gui\TelaPosicoes.java|1155|1173|drawCenteredString|method|net.minecraft.client.gui.Gui|drawCenteredString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|com\welclient\gui\TelaPosicoes.java|1174|1189|fontRendererObj|field|net.minecraft.client.gui.GuiScreen|fontRendererObj
+      @|com\welclient\gui\TelaPosicoes.java|1217|1222|width|field|net.minecraft.client.gui.GuiScreen|width
+      @|com\welclient\gui\TelaPosicoes.java|1259|1269|drawScreen|method|net.minecraft.client.gui.GuiScreen|drawScreen|(IIF)V
+      @|com\welclient\gui\TelaPosicoes.java|1270|1276|mouseX|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|mouseX|0
+      @|com\welclient\gui\TelaPosicoes.java|1278|1284|mouseY|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|mouseY|1
+      @|com\welclient\gui\TelaPosicoes.java|1286|1298|partialTicks|param|com.seuclient.gui.TelaPosicoes|drawScreen|(IIF)V|partialTicks|2
+   Method End: drawScreen(IIF)V
+Class End  : com.seuclient.gui.TelaPosicoes
+endProcessing com\welclient\gui\TelaPosicoes.java
+
+processing com\welclient\handlers\KeyInputHandler.java
+@|com\welclient\handlers\KeyInputHandler.java|8|30|com.seuclient.handlers|package|com.seuclient.handlers|(file)
+Class Start: com.seuclient.handlers.KeyInputHandler
+   @|com\welclient\handlers\KeyInputHandler.java|551|560|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\handlers\KeyInputHandler.java|561|563|mc|field|com.seuclient.handlers.KeyInputHandler|mc|
+   @|com\welclient\handlers\KeyInputHandler.java|566|575|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\handlers\KeyInputHandler.java|576|588|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|com\welclient\handlers\KeyInputHandler.java|635|645|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|646|663|teclaConfiguracao|field|com.seuclient.handlers.KeyInputHandler|teclaConfiguracao|
+   @|com\welclient\handlers\KeyInputHandler.java|684|694|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|695|705|teclaCores|field|com.seuclient.handlers.KeyInputHandler|teclaCores|
+   @|com\welclient\handlers\KeyInputHandler.java|726|736|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|737|750|teclaPosicoes|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoes|
+   @|com\welclient\handlers\KeyInputHandler.java|771|781|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|782|796|teclaToggleFPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleFPS|
+   @|com\welclient\handlers\KeyInputHandler.java|817|827|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|828|842|teclaToggleCPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCPS|
+   @|com\welclient\handlers\KeyInputHandler.java|863|873|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|874|891|teclaToggleTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTeclas|
+   @|com\welclient\handlers\KeyInputHandler.java|912|922|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|923|942|teclaToggleArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaToggleArmadura|
+   @|com\welclient\handlers\KeyInputHandler.java|963|973|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|974|992|teclaToggleAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaToggleAlcance|
+   @|com\welclient\handlers\KeyInputHandler.java|1013|1023|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1024|1046|teclaToggleCoordenadas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCoordenadas|
+   @|com\welclient\handlers\KeyInputHandler.java|1067|1077|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1078|1093|teclaTogglePing|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePing|
+   @|com\welclient\handlers\KeyInputHandler.java|1114|1124|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1125|1140|teclaToggleHora|field|com.seuclient.handlers.KeyInputHandler|teclaToggleHora|
+   @|com\welclient\handlers\KeyInputHandler.java|1161|1171|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1172|1190|teclaToggleDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaToggleDirecao|
+   @|com\welclient\handlers\KeyInputHandler.java|1211|1221|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1222|1240|teclaTogglePotions|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePotions|
+   @|com\welclient\handlers\KeyInputHandler.java|1261|1271|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|com\welclient\handlers\KeyInputHandler.java|1272|1288|teclaToggleTodos|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTodos|
+   @|com\welclient\handlers\KeyInputHandler.java|1349|1360|teclaConfig|field|com.seuclient.handlers.KeyInputHandler|teclaConfig|
+   @|com\welclient\handlers\KeyInputHandler.java|1363|1371|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1372|1382|KEY_RSHIFT|field|org.lwjgl.input.Keyboard|KEY_RSHIFT
+   @|com\welclient\handlers\KeyInputHandler.java|1406|1422|teclaCoresConfig|field|com.seuclient.handlers.KeyInputHandler|teclaCoresConfig|
+   @|com\welclient\handlers\KeyInputHandler.java|1425|1433|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1434|1439|KEY_C|field|org.lwjgl.input.Keyboard|KEY_C
+   @|com\welclient\handlers\KeyInputHandler.java|1463|1482|teclaPosicoesConfig|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoesConfig|
+   @|com\welclient\handlers\KeyInputHandler.java|1485|1493|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1494|1499|KEY_P|field|org.lwjgl.input.Keyboard|KEY_P
+   @|com\welclient\handlers\KeyInputHandler.java|1523|1531|teclaFPS|field|com.seuclient.handlers.KeyInputHandler|teclaFPS|
+   @|com\welclient\handlers\KeyInputHandler.java|1534|1542|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1543|1548|KEY_F|field|org.lwjgl.input.Keyboard|KEY_F
+   @|com\welclient\handlers\KeyInputHandler.java|1572|1580|teclaCPS|field|com.seuclient.handlers.KeyInputHandler|teclaCPS|
+   @|com\welclient\handlers\KeyInputHandler.java|1583|1591|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1592|1597|KEY_K|field|org.lwjgl.input.Keyboard|KEY_K
+   @|com\welclient\handlers\KeyInputHandler.java|1621|1632|teclaTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaTeclas|
+   @|com\welclient\handlers\KeyInputHandler.java|1635|1643|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1644|1649|KEY_J|field|org.lwjgl.input.Keyboard|KEY_J
+   @|com\welclient\handlers\KeyInputHandler.java|1673|1686|teclaArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaArmadura|
+   @|com\welclient\handlers\KeyInputHandler.java|1689|1697|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1698|1703|KEY_H|field|org.lwjgl.input.Keyboard|KEY_H
+   @|com\welclient\handlers\KeyInputHandler.java|1727|1739|teclaAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaAlcance|
+   @|com\welclient\handlers\KeyInputHandler.java|1742|1750|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1751|1756|KEY_R|field|org.lwjgl.input.Keyboard|KEY_R
+   @|com\welclient\handlers\KeyInputHandler.java|1780|1791|teclaCoords|field|com.seuclient.handlers.KeyInputHandler|teclaCoords|
+   @|com\welclient\handlers\KeyInputHandler.java|1794|1802|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1803|1808|KEY_X|field|org.lwjgl.input.Keyboard|KEY_X
+   @|com\welclient\handlers\KeyInputHandler.java|1832|1841|teclaPing|field|com.seuclient.handlers.KeyInputHandler|teclaPing|
+   @|com\welclient\handlers\KeyInputHandler.java|1844|1852|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1853|1858|KEY_V|field|org.lwjgl.input.Keyboard|KEY_V
+   @|com\welclient\handlers\KeyInputHandler.java|1882|1891|teclaHora|field|com.seuclient.handlers.KeyInputHandler|teclaHora|
+   @|com\welclient\handlers\KeyInputHandler.java|1894|1902|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1903|1908|KEY_B|field|org.lwjgl.input.Keyboard|KEY_B
+   @|com\welclient\handlers\KeyInputHandler.java|1932|1944|teclaDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaDirecao|
+   @|com\welclient\handlers\KeyInputHandler.java|1947|1955|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|1956|1961|KEY_N|field|org.lwjgl.input.Keyboard|KEY_N
+   @|com\welclient\handlers\KeyInputHandler.java|1985|1997|teclaPotions|field|com.seuclient.handlers.KeyInputHandler|teclaPotions|
+   @|com\welclient\handlers\KeyInputHandler.java|2000|2008|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|2009|2014|KEY_M|field|org.lwjgl.input.Keyboard|KEY_M
+   @|com\welclient\handlers\KeyInputHandler.java|2038|2048|teclaTodos|field|com.seuclient.handlers.KeyInputHandler|teclaTodos|
+   @|com\welclient\handlers\KeyInputHandler.java|2051|2059|Keyboard|class|org.lwjgl.input.Keyboard
+   @|com\welclient\handlers\KeyInputHandler.java|2060|2065|KEY_L|field|org.lwjgl.input.Keyboard|KEY_L
+   Method Start: init()V
+      @|com\welclient\handlers\KeyInputHandler.java|2095|2099|init|method|com.seuclient.handlers.KeyInputHandler|init|()V
+      @|com\welclient\handlers\KeyInputHandler.java|2145|2162|teclaConfiguracao|field|com.seuclient.handlers.KeyInputHandler|teclaConfiguracao
+      @|com\welclient\handlers\KeyInputHandler.java|2169|2179|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2203|2214|teclaConfig|field|com.seuclient.handlers.KeyInputHandler|teclaConfig
+      @|com\welclient\handlers\KeyInputHandler.java|2239|2249|teclaCores|field|com.seuclient.handlers.KeyInputHandler|teclaCores
+      @|com\welclient\handlers\KeyInputHandler.java|2256|2266|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2287|2303|teclaCoresConfig|field|com.seuclient.handlers.KeyInputHandler|teclaCoresConfig
+      @|com\welclient\handlers\KeyInputHandler.java|2328|2341|teclaPosicoes|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoes
+      @|com\welclient\handlers\KeyInputHandler.java|2348|2358|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2382|2401|teclaPosicoesConfig|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoesConfig
+      @|com\welclient\handlers\KeyInputHandler.java|2426|2440|teclaToggleFPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleFPS
+      @|com\welclient\handlers\KeyInputHandler.java|2447|2457|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2472|2480|teclaFPS|field|com.seuclient.handlers.KeyInputHandler|teclaFPS
+      @|com\welclient\handlers\KeyInputHandler.java|2505|2519|teclaToggleCPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCPS
+      @|com\welclient\handlers\KeyInputHandler.java|2526|2536|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2551|2559|teclaCPS|field|com.seuclient.handlers.KeyInputHandler|teclaCPS
+      @|com\welclient\handlers\KeyInputHandler.java|2584|2601|teclaToggleTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTeclas
+      @|com\welclient\handlers\KeyInputHandler.java|2608|2618|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2636|2647|teclaTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaTeclas
+      @|com\welclient\handlers\KeyInputHandler.java|2672|2691|teclaToggleArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaToggleArmadura
+      @|com\welclient\handlers\KeyInputHandler.java|2698|2708|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2728|2741|teclaArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaArmadura
+      @|com\welclient\handlers\KeyInputHandler.java|2766|2784|teclaToggleAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaToggleAlcance
+      @|com\welclient\handlers\KeyInputHandler.java|2791|2801|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2820|2832|teclaAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaAlcance
+      @|com\welclient\handlers\KeyInputHandler.java|2857|2879|teclaToggleCoordenadas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCoordenadas
+      @|com\welclient\handlers\KeyInputHandler.java|2886|2896|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|2919|2930|teclaCoords|field|com.seuclient.handlers.KeyInputHandler|teclaCoords
+      @|com\welclient\handlers\KeyInputHandler.java|2955|2970|teclaTogglePing|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePing
+      @|com\welclient\handlers\KeyInputHandler.java|2977|2987|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|3003|3012|teclaPing|field|com.seuclient.handlers.KeyInputHandler|teclaPing
+      @|com\welclient\handlers\KeyInputHandler.java|3037|3052|teclaToggleHora|field|com.seuclient.handlers.KeyInputHandler|teclaToggleHora
+      @|com\welclient\handlers\KeyInputHandler.java|3059|3069|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|3085|3094|teclaHora|field|com.seuclient.handlers.KeyInputHandler|teclaHora
+      @|com\welclient\handlers\KeyInputHandler.java|3119|3137|teclaToggleDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaToggleDirecao
+      @|com\welclient\handlers\KeyInputHandler.java|3144|3154|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|3173|3185|teclaDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaDirecao
+      @|com\welclient\handlers\KeyInputHandler.java|3210|3228|teclaTogglePotions|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePotions
+      @|com\welclient\handlers\KeyInputHandler.java|3235|3245|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|3263|3275|teclaPotions|field|com.seuclient.handlers.KeyInputHandler|teclaPotions
+      @|com\welclient\handlers\KeyInputHandler.java|3300|3316|teclaToggleTodos|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTodos
+      @|com\welclient\handlers\KeyInputHandler.java|3323|3333|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\handlers\KeyInputHandler.java|3358|3368|teclaTodos|field|com.seuclient.handlers.KeyInputHandler|teclaTodos
+      @|com\welclient\handlers\KeyInputHandler.java|3436|3450|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3451|3469|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3470|3487|teclaConfiguracao|field|com.seuclient.handlers.KeyInputHandler|teclaConfiguracao
+      @|com\welclient\handlers\KeyInputHandler.java|3498|3512|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3513|3531|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3532|3542|teclaCores|field|com.seuclient.handlers.KeyInputHandler|teclaCores
+      @|com\welclient\handlers\KeyInputHandler.java|3553|3567|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3568|3586|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3587|3600|teclaPosicoes|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoes
+      @|com\welclient\handlers\KeyInputHandler.java|3611|3625|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3626|3644|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3645|3659|teclaToggleFPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleFPS
+      @|com\welclient\handlers\KeyInputHandler.java|3670|3684|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3685|3703|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3704|3718|teclaToggleCPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCPS
+      @|com\welclient\handlers\KeyInputHandler.java|3729|3743|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3744|3762|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3763|3780|teclaToggleTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTeclas
+      @|com\welclient\handlers\KeyInputHandler.java|3791|3805|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3806|3824|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3825|3844|teclaToggleArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaToggleArmadura
+      @|com\welclient\handlers\KeyInputHandler.java|3855|3869|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3870|3888|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3889|3907|teclaToggleAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaToggleAlcance
+      @|com\welclient\handlers\KeyInputHandler.java|3918|3932|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|3933|3951|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|3952|3974|teclaToggleCoordenadas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCoordenadas
+      @|com\welclient\handlers\KeyInputHandler.java|3985|3999|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|4000|4018|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4019|4034|teclaTogglePing|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePing
+      @|com\welclient\handlers\KeyInputHandler.java|4045|4059|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|4060|4078|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4079|4094|teclaToggleHora|field|com.seuclient.handlers.KeyInputHandler|teclaToggleHora
+      @|com\welclient\handlers\KeyInputHandler.java|4105|4119|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|4120|4138|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4139|4157|teclaToggleDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaToggleDirecao
+      @|com\welclient\handlers\KeyInputHandler.java|4168|4182|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|4183|4201|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4202|4220|teclaTogglePotions|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePotions
+      @|com\welclient\handlers\KeyInputHandler.java|4231|4245|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|com\welclient\handlers\KeyInputHandler.java|4246|4264|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4265|4281|teclaToggleTodos|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTodos
+   Method End: init()V
+   Method Start: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4331|4341|onKeyInput|method|com.seuclient.handlers.KeyInputHandler|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4342|4366|InputEvent.KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|com\welclient\handlers\KeyInputHandler.java|4367|4372|event|param|com.seuclient.handlers.KeyInputHandler|onKeyInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|com\welclient\handlers\KeyInputHandler.java|4432|4449|teclaConfiguracao|field|com.seuclient.handlers.KeyInputHandler|teclaConfiguracao
+      @|com\welclient\handlers\KeyInputHandler.java|4450|4459|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|com\welclient\handlers\KeyInputHandler.java|4477|4479|mc|field|com.seuclient.handlers.KeyInputHandler|mc
+      @|com\welclient\handlers\KeyInputHandler.java|4480|4496|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4501|4517|TelaConfiguracao|class|TelaConfiguracao
+      @|com\welclient\handlers\KeyInputHandler.java|4573|4583|teclaCores|field|com.seuclient.handlers.KeyInputHandler|teclaCores
+      @|com\welclient\handlers\KeyInputHandler.java|4584|4593|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|com\welclient\handlers\KeyInputHandler.java|4611|4613|mc|field|com.seuclient.handlers.KeyInputHandler|mc
+      @|com\welclient\handlers\KeyInputHandler.java|4614|4630|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4635|4644|TelaCores|class|TelaCores
+      @|com\welclient\handlers\KeyInputHandler.java|4700|4713|teclaPosicoes|field|com.seuclient.handlers.KeyInputHandler|teclaPosicoes
+      @|com\welclient\handlers\KeyInputHandler.java|4714|4723|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|com\welclient\handlers\KeyInputHandler.java|4741|4743|mc|field|com.seuclient.handlers.KeyInputHandler|mc
+      @|com\welclient\handlers\KeyInputHandler.java|4744|4760|displayGuiScreen|method|net.minecraft.client.Minecraft|displayGuiScreen|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|com\welclient\handlers\KeyInputHandler.java|4765|4777|TelaPosicoes|class|TelaPosicoes
+      @|com\welclient\handlers\KeyInputHandler.java|4871|4885|teclaToggleFPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleFPS
+      @|com\welclient\handlers\KeyInputHandler.java|4886|4895|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      @|com\welclient\handlers\KeyInputHandler.java|4965|4979|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      @|com\welclient\handlers\KeyInputHandler.java|5073|5087|teclaToggleCPS|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCPS
+      @|com\welclient\handlers\KeyInputHandler.java|5088|5097|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      @|com\welclient\handlers\KeyInputHandler.java|5167|5181|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      @|com\welclient\handlers\KeyInputHandler.java|5275|5292|teclaToggleTeclas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTeclas
+      @|com\welclient\handlers\KeyInputHandler.java|5293|5302|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      @|com\welclient\handlers\KeyInputHandler.java|5378|5392|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      @|com\welclient\handlers\KeyInputHandler.java|5492|5511|teclaToggleArmadura|field|com.seuclient.handlers.KeyInputHandler|teclaToggleArmadura
+      @|com\welclient\handlers\KeyInputHandler.java|5512|5521|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      @|com\welclient\handlers\KeyInputHandler.java|5613|5627|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      @|com\welclient\handlers\KeyInputHandler.java|5737|5755|teclaToggleAlcance|field|com.seuclient.handlers.KeyInputHandler|teclaToggleAlcance
+      @|com\welclient\handlers\KeyInputHandler.java|5756|5765|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      @|com\welclient\handlers\KeyInputHandler.java|5857|5871|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      @|com\welclient\handlers\KeyInputHandler.java|5980|6002|teclaToggleCoordenadas|field|com.seuclient.handlers.KeyInputHandler|teclaToggleCoordenadas
+      @|com\welclient\handlers\KeyInputHandler.java|6003|6012|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      @|com\welclient\handlers\KeyInputHandler.java|6098|6112|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      @|com\welclient\handlers\KeyInputHandler.java|6222|6237|teclaTogglePing|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePing
+      @|com\welclient\handlers\KeyInputHandler.java|6238|6247|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      @|com\welclient\handlers\KeyInputHandler.java|6319|6333|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      @|com\welclient\handlers\KeyInputHandler.java|6429|6444|teclaToggleHora|field|com.seuclient.handlers.KeyInputHandler|teclaToggleHora
+      @|com\welclient\handlers\KeyInputHandler.java|6445|6454|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      @|com\welclient\handlers\KeyInputHandler.java|6526|6540|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      @|com\welclient\handlers\KeyInputHandler.java|6636|6654|teclaToggleDirecao|field|com.seuclient.handlers.KeyInputHandler|teclaToggleDirecao
+      @|com\welclient\handlers\KeyInputHandler.java|6655|6664|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      @|com\welclient\handlers\KeyInputHandler.java|6742|6756|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      @|com\welclient\handlers\KeyInputHandler.java|6858|6876|teclaTogglePotions|field|com.seuclient.handlers.KeyInputHandler|teclaTogglePotions
+      @|com\welclient\handlers\KeyInputHandler.java|6877|6886|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      @|com\welclient\handlers\KeyInputHandler.java|6964|6978|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      @|com\welclient\handlers\KeyInputHandler.java|7079|7095|teclaToggleTodos|field|com.seuclient.handlers.KeyInputHandler|teclaToggleTodos
+      @|com\welclient\handlers\KeyInputHandler.java|7096|7105|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      @|com\welclient\handlers\KeyInputHandler.java|8082|8096|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+   Method End: onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+   Method Start: enviarMensagem(Ljava/lang/String;)V
+      @|com\welclient\handlers\KeyInputHandler.java|8209|8223|enviarMensagem|method|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V
+      @|com\welclient\handlers\KeyInputHandler.java|8224|8230|String|class|java.lang.String
+      @|com\welclient\handlers\KeyInputHandler.java|8231|8239|mensagem|param|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V|mensagem|0
+      @|com\welclient\handlers\KeyInputHandler.java|8255|8257|mc|field|com.seuclient.handlers.KeyInputHandler|mc
+      @|com\welclient\handlers\KeyInputHandler.java|8258|8267|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\handlers\KeyInputHandler.java|8291|8293|mc|field|com.seuclient.handlers.KeyInputHandler|mc
+      @|com\welclient\handlers\KeyInputHandler.java|8294|8303|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\handlers\KeyInputHandler.java|8304|8318|addChatMessage|method|net.minecraft.command.ICommandSender|addChatMessage|(Lnet/minecraft/util/IChatComponent;)V
+      @|com\welclient\handlers\KeyInputHandler.java|8323|8359|net.minecraft.util.ChatComponentText|class|net.minecraft.util.ChatComponentText
+      @|com\welclient\handlers\KeyInputHandler.java|8386|8394|mensagem|param|com.seuclient.handlers.KeyInputHandler|enviarMensagem|(Ljava/lang/String;)V|mensagem|0
+   Method End: enviarMensagem(Ljava/lang/String;)V
+Class End  : com.seuclient.handlers.KeyInputHandler
+endProcessing com\welclient\handlers\KeyInputHandler.java
+
+processing com\welclient\handlers\RenderHandler.java
+@|com\welclient\handlers\RenderHandler.java|8|30|com.seuclient.handlers|package|com.seuclient.handlers|(file)
+Class Start: com.seuclient.handlers.RenderHandler
+   @|com\welclient\handlers\RenderHandler.java|273|282|ModTeclas|class|com.seuclient.handlers.ModTeclas
+   @|com\welclient\handlers\RenderHandler.java|283|289|teclas|field|com.seuclient.handlers.RenderHandler|teclas|
+   @|com\welclient\handlers\RenderHandler.java|296|305|ModTeclas|class|ModTeclas
+   @|com\welclient\handlers\RenderHandler.java|327|333|ModFPS|class|com.seuclient.handlers.ModFPS
+   @|com\welclient\handlers\RenderHandler.java|334|337|fps|field|com.seuclient.handlers.RenderHandler|fps|
+   @|com\welclient\handlers\RenderHandler.java|344|350|ModFPS|class|ModFPS
+   @|com\welclient\handlers\RenderHandler.java|372|378|ModCPS|class|com.seuclient.handlers.ModCPS
+   @|com\welclient\handlers\RenderHandler.java|379|382|cps|field|com.seuclient.handlers.RenderHandler|cps|
+   @|com\welclient\handlers\RenderHandler.java|389|395|ModCPS|class|ModCPS
+   @|com\welclient\handlers\RenderHandler.java|417|434|ModStatusArmadura|class|com.seuclient.handlers.ModStatusArmadura
+   @|com\welclient\handlers\RenderHandler.java|435|449|statusArmadura|field|com.seuclient.handlers.RenderHandler|statusArmadura|
+   @|com\welclient\handlers\RenderHandler.java|456|473|ModStatusArmadura|class|ModStatusArmadura
+   @|com\welclient\handlers\RenderHandler.java|495|512|ModDisplayAlcance|class|com.seuclient.handlers.ModDisplayAlcance
+   @|com\welclient\handlers\RenderHandler.java|513|527|displayAlcance|field|com.seuclient.handlers.RenderHandler|displayAlcance|
+   @|com\welclient\handlers\RenderHandler.java|534|551|ModDisplayAlcance|class|ModDisplayAlcance
+   @|com\welclient\handlers\RenderHandler.java|573|587|ModCoordenadas|class|com.seuclient.handlers.ModCoordenadas
+   @|com\welclient\handlers\RenderHandler.java|588|599|coordenadas|field|com.seuclient.handlers.RenderHandler|coordenadas|
+   @|com\welclient\handlers\RenderHandler.java|606|620|ModCoordenadas|class|ModCoordenadas
+   @|com\welclient\handlers\RenderHandler.java|642|649|ModPing|class|com.seuclient.handlers.ModPing
+   @|com\welclient\handlers\RenderHandler.java|650|654|ping|field|com.seuclient.handlers.RenderHandler|ping|
+   @|com\welclient\handlers\RenderHandler.java|661|668|ModPing|class|ModPing
+   @|com\welclient\handlers\RenderHandler.java|690|697|ModHora|class|com.seuclient.handlers.ModHora
+   @|com\welclient\handlers\RenderHandler.java|698|702|hora|field|com.seuclient.handlers.RenderHandler|hora|
+   @|com\welclient\handlers\RenderHandler.java|709|716|ModHora|class|ModHora
+   @|com\welclient\handlers\RenderHandler.java|738|748|ModDirecao|class|com.seuclient.handlers.ModDirecao
+   @|com\welclient\handlers\RenderHandler.java|749|756|direcao|field|com.seuclient.handlers.RenderHandler|direcao|
+   @|com\welclient\handlers\RenderHandler.java|763|773|ModDirecao|class|ModDirecao
+   @|com\welclient\handlers\RenderHandler.java|795|805|ModPotions|class|com.seuclient.handlers.ModPotions
+   @|com\welclient\handlers\RenderHandler.java|806|813|potions|field|com.seuclient.handlers.RenderHandler|potions|
+   @|com\welclient\handlers\RenderHandler.java|820|830|ModPotions|class|ModPotions
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
+      @|com\welclient\handlers\RenderHandler.java|875|894|onRenderGameOverlay|method|com.seuclient.handlers.RenderHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
+      @|com\welclient\handlers\RenderHandler.java|895|922|RenderGameOverlayEvent.Post|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Post
+      @|com\welclient\handlers\RenderHandler.java|923|928|event|param|com.seuclient.handlers.RenderHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|com\welclient\handlers\RenderHandler.java|944|949|event|param|com.seuclient.handlers.RenderHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|com\welclient\handlers\RenderHandler.java|950|954|type|field|net.minecraftforge.client.event.RenderGameOverlayEvent|type
+      @|com\welclient\handlers\RenderHandler.java|958|992|RenderGameOverlayEvent.ElementType|class|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType
+      @|com\welclient\handlers\RenderHandler.java|993|996|ALL|field|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType|ALL
+      @|com\welclient\handlers\RenderHandler.java|1041|1046|event|param|com.seuclient.handlers.RenderHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|com\welclient\handlers\RenderHandler.java|1047|1057|resolution|field|net.minecraftforge.client.event.RenderGameOverlayEvent|resolution
+      @|com\welclient\handlers\RenderHandler.java|1058|1072|getScaledWidth|method|net.minecraft.client.gui.ScaledResolution|getScaledWidth|()I
+      @|com\welclient\handlers\RenderHandler.java|1101|1106|event|param|com.seuclient.handlers.RenderHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|com\welclient\handlers\RenderHandler.java|1107|1117|resolution|field|net.minecraftforge.client.event.RenderGameOverlayEvent|resolution
+      @|com\welclient\handlers\RenderHandler.java|1118|1133|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarTeclas null
+      @|com\welclient\handlers\RenderHandler.java|1247|1253|teclas|field|com.seuclient.handlers.RenderHandler|teclas
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYTeclas null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarFPS null
+      @|com\welclient\handlers\RenderHandler.java|1377|1380|fps|field|com.seuclient.handlers.RenderHandler|fps
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYFPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCPS null
+      @|com\welclient\handlers\RenderHandler.java|1485|1488|cps|field|com.seuclient.handlers.RenderHandler|cps
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYCPS null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarStatusArmadura null
+      @|com\welclient\handlers\RenderHandler.java|1604|1618|statusArmadura|field|com.seuclient.handlers.RenderHandler|statusArmadura
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYArmadura null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDisplayAlcance null
+      @|com\welclient\handlers\RenderHandler.java|1771|1785|displayAlcance|field|com.seuclient.handlers.RenderHandler|displayAlcance
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYAlcance null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarCoordenadas null
+      @|com\welclient\handlers\RenderHandler.java|1920|1931|coordenadas|field|com.seuclient.handlers.RenderHandler|coordenadas
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXCoords null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYCoords null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPing null
+      @|com\welclient\handlers\RenderHandler.java|2043|2047|ping|field|com.seuclient.handlers.RenderHandler|ping
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYPing null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarHora null
+      @|com\welclient\handlers\RenderHandler.java|2155|2159|hora|field|com.seuclient.handlers.RenderHandler|hora
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posXHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: posYHora null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarDirecao null
+      @|com\welclient\handlers\RenderHandler.java|2270|2277|direcao|field|com.seuclient.handlers.RenderHandler|direcao
+      ERROR SimpleName: render null
+      ERROR SimpleName: Config null
+      ERROR SimpleName: mostrarPotions null
+      @|com\welclient\handlers\RenderHandler.java|2362|2369|potions|field|com.seuclient.handlers.RenderHandler|potions
+      ERROR SimpleName: render null
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
+Class End  : com.seuclient.handlers.RenderHandler
+endProcessing com\welclient\handlers\RenderHandler.java
+
+processing com\welclient\mods\ModCPS.java
+@|com\welclient\mods\ModCPS.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModCPS
+   @|com\welclient\mods\ModCPS.java|316|325|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModCPS.java|326|328|mc|field|com.seuclient.mods.ModCPS|mc|
+   @|com\welclient\mods\ModCPS.java|331|340|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModCPS.java|341|353|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|com\welclient\mods\ModCPS.java|374|378|Long|class|java.lang.Long
+   @|com\welclient\mods\ModCPS.java|369|373|List|class|java.util.List
+   @|com\welclient\mods\ModCPS.java|380|395|cliquesEsquerdo|field|com.seuclient.mods.ModCPS|cliquesEsquerdo|
+   @|com\welclient\mods\ModCPS.java|402|411|ArrayList|class|java.util.ArrayList
+   @|com\welclient\mods\ModCPS.java|434|438|Long|class|java.lang.Long
+   @|com\welclient\mods\ModCPS.java|429|433|List|class|java.util.List
+   @|com\welclient\mods\ModCPS.java|440|454|cliquesDireito|field|com.seuclient.mods.ModCPS|cliquesDireito|
+   @|com\welclient\mods\ModCPS.java|461|470|ArrayList|class|java.util.ArrayList
+   Method Start: onMouseInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$MouseInputEvent;)V
+      @|com\welclient\mods\ModCPS.java|517|529|onMouseInput|method|com.seuclient.mods.ModCPS|onMouseInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$MouseInputEvent;)V
+      @|com\welclient\mods\ModCPS.java|530|556|InputEvent.MouseInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.MouseInputEvent
+      @|com\welclient\mods\ModCPS.java|557|562|event|param|com.seuclient.mods.ModCPS|onMouseInput|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$MouseInputEvent;)V|event|0
+      @|com\welclient\mods\ModCPS.java|578|583|Mouse|class|org.lwjgl.input.Mouse
+      @|com\welclient\mods\ModCPS.java|584|603|getEventButtonState|method|org.lwjgl.input.Mouse|getEventButtonState|()Z
+      @|com\welclient\mods\ModCPS.java|625|630|Mouse|class|org.lwjgl.input.Mouse
+      @|com\welclient\mods\ModCPS.java|631|645|getEventButton|method|org.lwjgl.input.Mouse|getEventButton|()I
+      @|com\welclient\mods\ModCPS.java|691|706|cliquesEsquerdo|field|com.seuclient.mods.ModCPS|cliquesEsquerdo
+      @|com\welclient\mods\ModCPS.java|707|710|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\mods\ModCPS.java|711|717|System|class|java.lang.System
+      @|com\welclient\mods\ModCPS.java|718|735|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|com\welclient\mods\ModCPS.java|763|768|Mouse|class|org.lwjgl.input.Mouse
+      @|com\welclient\mods\ModCPS.java|769|783|getEventButton|method|org.lwjgl.input.Mouse|getEventButton|()I
+      @|com\welclient\mods\ModCPS.java|828|842|cliquesDireito|field|com.seuclient.mods.ModCPS|cliquesDireito
+      @|com\welclient\mods\ModCPS.java|843|846|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\welclient\mods\ModCPS.java|847|853|System|class|java.lang.System
+      @|com\welclient\mods\ModCPS.java|854|871|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: onMouseInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent$MouseInputEvent;)V
+   Method Start: getCPSEsquerdo()I
+      @|com\welclient\mods\ModCPS.java|926|940|getCPSEsquerdo|method|com.seuclient.mods.ModCPS|getCPSEsquerdo|()I
+      @|com\welclient\mods\ModCPS.java|953|959|limpar|method|com.seuclient.mods.ModCPS|limpar|(Ljava/util/List;)V
+      @|com\welclient\mods\ModCPS.java|960|975|cliquesEsquerdo|field|com.seuclient.mods.ModCPS|cliquesEsquerdo
+      @|com\welclient\mods\ModCPS.java|993|1008|cliquesEsquerdo|field|com.seuclient.mods.ModCPS|cliquesEsquerdo
+      @|com\welclient\mods\ModCPS.java|1009|1013|size|method|java.util.Collection|size|()I
+   Method End: getCPSEsquerdo()I
+   Method Start: getCPSDireito()I
+      @|com\welclient\mods\ModCPS.java|1043|1056|getCPSDireito|method|com.seuclient.mods.ModCPS|getCPSDireito|()I
+      @|com\welclient\mods\ModCPS.java|1069|1075|limpar|method|com.seuclient.mods.ModCPS|limpar|(Ljava/util/List;)V
+      @|com\welclient\mods\ModCPS.java|1076|1090|cliquesDireito|field|com.seuclient.mods.ModCPS|cliquesDireito
+      @|com\welclient\mods\ModCPS.java|1108|1122|cliquesDireito|field|com.seuclient.mods.ModCPS|cliquesDireito
+      @|com\welclient\mods\ModCPS.java|1123|1127|size|method|java.util.Collection|size|()I
+   Method End: getCPSDireito()I
+   Method Start: limpar(Ljava/util/List;)V
+      @|com\welclient\mods\ModCPS.java|1159|1165|limpar|method|com.seuclient.mods.ModCPS|limpar|(Ljava/util/List;)V
+      @|com\welclient\mods\ModCPS.java|1171|1175|Long|class|java.lang.Long
+      @|com\welclient\mods\ModCPS.java|1166|1170|List|class|java.util.List
+      @|com\welclient\mods\ModCPS.java|1177|1184|cliques|param|com.seuclient.mods.ModCPS|limpar|(Ljava/util/List;)V|cliques|0
+      @|com\welclient\mods\ModCPS.java|1214|1220|System|class|java.lang.System
+      @|com\welclient\mods\ModCPS.java|1221|1238|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|com\welclient\mods\ModCPS.java|1250|1257|cliques|param|com.seuclient.mods.ModCPS|limpar|(Ljava/util/List;)V|cliques|0
+      @|com\welclient\mods\ModCPS.java|1258|1266|removeIf|method|java.util.Collection|removeIf|(Ljava/util/function/Predicate;)Z
+   Method End: limpar(Ljava/util/List;)V
+   Method Start: render(II)V
+      @|com\welclient\mods\ModCPS.java|1331|1337|render|method|com.seuclient.mods.ModCPS|render|(II)V
+      @|com\welclient\mods\ModCPS.java|1342|1343|x|param|com.seuclient.mods.ModCPS|render|(II)V|x|0
+      @|com\welclient\mods\ModCPS.java|1349|1350|y|param|com.seuclient.mods.ModCPS|render|(II)V|y|1
+      @|com\welclient\mods\ModCPS.java|1362|1368|String|class|java.lang.String
+      @|com\welclient\mods\ModCPS.java|1390|1404|getCPSEsquerdo|method|com.seuclient.mods.ModCPS|getCPSEsquerdo|()I
+      @|com\welclient\mods\ModCPS.java|1417|1430|getCPSDireito|method|com.seuclient.mods.ModCPS|getCPSDireito|()I
+      @|com\welclient\mods\ModCPS.java|1442|1444|mc|field|com.seuclient.mods.ModCPS|mc
+      @|com\welclient\mods\ModCPS.java|1445|1460|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModCPS.java|1461|1481|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModCPS.java|1492|1493|x|param|com.seuclient.mods.ModCPS|render|(II)V|x|0
+      @|com\welclient\mods\ModCPS.java|1495|1496|y|param|com.seuclient.mods.ModCPS|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModCPS
+endProcessing com\welclient\mods\ModCPS.java
+
+processing com\welclient\mods\ModCoordenadas.java
+@|com\welclient\mods\ModCoordenadas.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModCoordenadas
+   @|com\welclient\mods\ModCoordenadas.java|198|207|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModCoordenadas.java|208|210|mc|field|com.seuclient.mods.ModCoordenadas|mc|
+   @|com\welclient\mods\ModCoordenadas.java|213|222|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModCoordenadas.java|223|235|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModCoordenadas.java|260|266|render|method|com.seuclient.mods.ModCoordenadas|render|(II)V
+      @|com\welclient\mods\ModCoordenadas.java|271|272|x|param|com.seuclient.mods.ModCoordenadas|render|(II)V|x|0
+      @|com\welclient\mods\ModCoordenadas.java|278|279|y|param|com.seuclient.mods.ModCoordenadas|render|(II)V|y|1
+      @|com\welclient\mods\ModCoordenadas.java|295|297|mc|field|com.seuclient.mods.ModCoordenadas|mc
+      @|com\welclient\mods\ModCoordenadas.java|298|307|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModCoordenadas.java|342|355|DecimalFormat|class|java.text.DecimalFormat
+      @|com\welclient\mods\ModCoordenadas.java|365|378|DecimalFormat|class|java.text.DecimalFormat
+      @|com\welclient\mods\ModCoordenadas.java|395|401|String|class|java.lang.String
+      @|com\welclient\mods\ModCoordenadas.java|411|417|String|class|java.lang.String
+      @|com\welclient\mods\ModCoordenadas.java|418|424|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      @|com\welclient\mods\ModCoordenadas.java|460|466|format|method|java.text.NumberFormat|format|(D)Ljava/lang/String;
+      @|com\welclient\mods\ModCoordenadas.java|467|469|mc|field|com.seuclient.mods.ModCoordenadas|mc
+      @|com\welclient\mods\ModCoordenadas.java|470|479|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModCoordenadas.java|480|484|posX|field|net.minecraft.entity.Entity|posX
+      @|com\welclient\mods\ModCoordenadas.java|502|508|format|method|java.text.NumberFormat|format|(D)Ljava/lang/String;
+      @|com\welclient\mods\ModCoordenadas.java|509|511|mc|field|com.seuclient.mods.ModCoordenadas|mc
+      @|com\welclient\mods\ModCoordenadas.java|512|521|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModCoordenadas.java|522|526|posY|field|net.minecraft.entity.Entity|posY
+      @|com\welclient\mods\ModCoordenadas.java|544|550|format|method|java.text.NumberFormat|format|(D)Ljava/lang/String;
+      @|com\welclient\mods\ModCoordenadas.java|551|553|mc|field|com.seuclient.mods.ModCoordenadas|mc
+      @|com\welclient\mods\ModCoordenadas.java|554|563|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModCoordenadas.java|564|568|posZ|field|net.minecraft.entity.Entity|posZ
+      @|com\welclient\mods\ModCoordenadas.java|589|591|mc|field|com.seuclient.mods.ModCoordenadas|mc
+      @|com\welclient\mods\ModCoordenadas.java|592|607|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModCoordenadas.java|608|628|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModCoordenadas.java|637|638|x|param|com.seuclient.mods.ModCoordenadas|render|(II)V|x|0
+      @|com\welclient\mods\ModCoordenadas.java|640|641|y|param|com.seuclient.mods.ModCoordenadas|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModCoordenadas
+endProcessing com\welclient\mods\ModCoordenadas.java
+
+processing com\welclient\mods\ModDirecao.java
+@|com\welclient\mods\ModDirecao.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModDirecao
+   @|com\welclient\mods\ModDirecao.java|200|209|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModDirecao.java|210|212|mc|field|com.seuclient.mods.ModDirecao|mc|
+   @|com\welclient\mods\ModDirecao.java|215|224|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModDirecao.java|225|237|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModDirecao.java|262|268|render|method|com.seuclient.mods.ModDirecao|render|(II)V
+      @|com\welclient\mods\ModDirecao.java|273|274|x|param|com.seuclient.mods.ModDirecao|render|(II)V|x|0
+      @|com\welclient\mods\ModDirecao.java|280|281|y|param|com.seuclient.mods.ModDirecao|render|(II)V|y|1
+      @|com\welclient\mods\ModDirecao.java|297|299|mc|field|com.seuclient.mods.ModDirecao|mc
+      @|com\welclient\mods\ModDirecao.java|300|309|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModDirecao.java|344|354|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\welclient\mods\ModDirecao.java|365|367|mc|field|com.seuclient.mods.ModDirecao|mc
+      @|com\welclient\mods\ModDirecao.java|368|377|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModDirecao.java|378|397|getHorizontalFacing|method|net.minecraft.entity.Entity|getHorizontalFacing|()Lnet/minecraft/util/EnumFacing;
+      @|com\welclient\mods\ModDirecao.java|409|415|String|class|java.lang.String
+      @|com\welclient\mods\ModDirecao.java|483|488|NORTH|field|net.minecraft.util.EnumFacing|NORTH
+      @|com\welclient\mods\ModDirecao.java|575|580|SOUTH|field|net.minecraft.util.EnumFacing|SOUTH
+      @|com\welclient\mods\ModDirecao.java|665|669|EAST|field|net.minecraft.util.EnumFacing|EAST
+      @|com\welclient\mods\ModDirecao.java|756|760|WEST|field|net.minecraft.util.EnumFacing|WEST
+      @|com\welclient\mods\ModDirecao.java|925|927|mc|field|com.seuclient.mods.ModDirecao|mc
+      @|com\welclient\mods\ModDirecao.java|928|943|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModDirecao.java|944|964|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModDirecao.java|993|994|x|param|com.seuclient.mods.ModDirecao|render|(II)V|x|0
+      @|com\welclient\mods\ModDirecao.java|996|997|y|param|com.seuclient.mods.ModDirecao|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModDirecao
+endProcessing com\welclient\mods\ModDirecao.java
+
+processing com\welclient\mods\ModDisplayAlcance.java
+@|com\welclient\mods\ModDisplayAlcance.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModDisplayAlcance
+   @|com\welclient\mods\ModDisplayAlcance.java|217|226|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModDisplayAlcance.java|227|229|mc|field|com.seuclient.mods.ModDisplayAlcance|mc|
+   @|com\welclient\mods\ModDisplayAlcance.java|232|241|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModDisplayAlcance.java|242|254|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModDisplayAlcance.java|275|281|render|method|com.seuclient.mods.ModDisplayAlcance|render|(II)V
+      @|com\welclient\mods\ModDisplayAlcance.java|286|287|x|param|com.seuclient.mods.ModDisplayAlcance|render|(II)V|x|0
+      @|com\welclient\mods\ModDisplayAlcance.java|293|294|y|param|com.seuclient.mods.ModDisplayAlcance|render|(II)V|y|1
+      @|com\welclient\mods\ModDisplayAlcance.java|306|326|MovingObjectPosition|class|net.minecraft.util.MovingObjectPosition
+      @|com\welclient\mods\ModDisplayAlcance.java|334|336|mc|field|com.seuclient.mods.ModDisplayAlcance|mc
+      @|com\welclient\mods\ModDisplayAlcance.java|337|352|objectMouseOver|field|net.minecraft.client.Minecraft|objectMouseOver
+      @|com\welclient\mods\ModDisplayAlcance.java|362|368|String|class|java.lang.String
+      @|com\welclient\mods\ModDisplayAlcance.java|420|422|mc|field|com.seuclient.mods.ModDisplayAlcance|mc
+      @|com\welclient\mods\ModDisplayAlcance.java|423|432|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModDisplayAlcance.java|473|475|mc|field|com.seuclient.mods.ModDisplayAlcance|mc
+      @|com\welclient\mods\ModDisplayAlcance.java|476|485|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModDisplayAlcance.java|486|497|getDistance|method|net.minecraft.entity.Entity|getDistance|(DDD)D
+      @|com\welclient\mods\ModDisplayAlcance.java|503|509|hitVec|field|net.minecraft.util.MovingObjectPosition|hitVec
+      @|com\welclient\mods\ModDisplayAlcance.java|510|516|xCoord|field|net.minecraft.util.Vec3|xCoord
+      @|com\welclient\mods\ModDisplayAlcance.java|523|529|hitVec|field|net.minecraft.util.MovingObjectPosition|hitVec
+      @|com\welclient\mods\ModDisplayAlcance.java|530|536|yCoord|field|net.minecraft.util.Vec3|yCoord
+      @|com\welclient\mods\ModDisplayAlcance.java|543|549|hitVec|field|net.minecraft.util.MovingObjectPosition|hitVec
+      @|com\welclient\mods\ModDisplayAlcance.java|550|556|zCoord|field|net.minecraft.util.Vec3|zCoord
+      @|com\welclient\mods\ModDisplayAlcance.java|579|585|String|class|java.lang.String
+      @|com\welclient\mods\ModDisplayAlcance.java|586|592|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      @|com\welclient\mods\ModDisplayAlcance.java|639|641|mc|field|com.seuclient.mods.ModDisplayAlcance|mc
+      @|com\welclient\mods\ModDisplayAlcance.java|642|657|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModDisplayAlcance.java|658|678|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModDisplayAlcance.java|686|687|x|param|com.seuclient.mods.ModDisplayAlcance|render|(II)V|x|0
+      @|com\welclient\mods\ModDisplayAlcance.java|689|690|y|param|com.seuclient.mods.ModDisplayAlcance|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModDisplayAlcance
+endProcessing com\welclient\mods\ModDisplayAlcance.java
+
+processing com\welclient\mods\ModFPS.java
+@|com\welclient\mods\ModFPS.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModFPS
+   @|com\welclient\mods\ModFPS.java|158|167|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModFPS.java|168|170|mc|field|com.seuclient.mods.ModFPS|mc|
+   @|com\welclient\mods\ModFPS.java|173|182|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModFPS.java|183|195|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModFPS.java|220|226|render|method|com.seuclient.mods.ModFPS|render|(II)V
+      @|com\welclient\mods\ModFPS.java|231|232|x|param|com.seuclient.mods.ModFPS|render|(II)V|x|0
+      @|com\welclient\mods\ModFPS.java|238|239|y|param|com.seuclient.mods.ModFPS|render|(II)V|y|1
+      @|com\welclient\mods\ModFPS.java|261|270|Minecraft|class|net.minecraft.client.Minecraft
+      @|com\welclient\mods\ModFPS.java|271|282|getDebugFPS|method|net.minecraft.client.Minecraft|getDebugFPS|()I
+      @|com\welclient\mods\ModFPS.java|294|300|String|class|java.lang.String
+      @|com\welclient\mods\ModFPS.java|616|618|mc|field|com.seuclient.mods.ModFPS|mc
+      @|com\welclient\mods\ModFPS.java|619|634|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModFPS.java|635|655|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModFPS.java|666|667|x|param|com.seuclient.mods.ModFPS|render|(II)V|x|0
+      @|com\welclient\mods\ModFPS.java|669|670|y|param|com.seuclient.mods.ModFPS|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModFPS
+endProcessing com\welclient\mods\ModFPS.java
+
+processing com\welclient\mods\ModHora.java
+@|com\welclient\mods\ModHora.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModHora
+   @|com\welclient\mods\ModHora.java|217|226|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModHora.java|227|229|mc|field|com.seuclient.mods.ModHora|mc|
+   @|com\welclient\mods\ModHora.java|232|241|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModHora.java|242|254|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModHora.java|279|285|render|method|com.seuclient.mods.ModHora|render|(II)V
+      @|com\welclient\mods\ModHora.java|290|291|x|param|com.seuclient.mods.ModHora|render|(II)V|x|0
+      @|com\welclient\mods\ModHora.java|297|298|y|param|com.seuclient.mods.ModHora|render|(II)V|y|1
+      @|com\welclient\mods\ModHora.java|310|326|SimpleDateFormat|class|java.text.SimpleDateFormat
+      @|com\welclient\mods\ModHora.java|337|353|SimpleDateFormat|class|java.text.SimpleDateFormat
+      @|com\welclient\mods\ModHora.java|375|381|String|class|java.lang.String
+      @|com\welclient\mods\ModHora.java|404|410|format|method|java.text.DateFormat|format|(Ljava/util/Date;)Ljava/lang/String;
+      @|com\welclient\mods\ModHora.java|415|419|Date|class|java.util.Date
+      @|com\welclient\mods\ModHora.java|441|443|mc|field|com.seuclient.mods.ModHora|mc
+      @|com\welclient\mods\ModHora.java|444|459|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModHora.java|460|480|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModHora.java|487|488|x|param|com.seuclient.mods.ModHora|render|(II)V|x|0
+      @|com\welclient\mods\ModHora.java|490|491|y|param|com.seuclient.mods.ModHora|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModHora
+endProcessing com\welclient\mods\ModHora.java
+
+processing com\welclient\mods\ModPing.java
+@|com\welclient\mods\ModPing.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModPing
+   @|com\welclient\mods\ModPing.java|214|223|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModPing.java|224|226|mc|field|com.seuclient.mods.ModPing|mc|
+   @|com\welclient\mods\ModPing.java|229|238|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModPing.java|239|251|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModPing.java|276|282|render|method|com.seuclient.mods.ModPing|render|(II)V
+      @|com\welclient\mods\ModPing.java|287|288|x|param|com.seuclient.mods.ModPing|render|(II)V|x|0
+      @|com\welclient\mods\ModPing.java|294|295|y|param|com.seuclient.mods.ModPing|render|(II)V|y|1
+      @|com\welclient\mods\ModPing.java|311|313|mc|field|com.seuclient.mods.ModPing|mc
+      @|com\welclient\mods\ModPing.java|314|323|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModPing.java|335|337|mc|field|com.seuclient.mods.ModPing|mc
+      @|com\welclient\mods\ModPing.java|338|351|getNetHandler|method|net.minecraft.client.Minecraft|getNetHandler|()Lnet/minecraft/client/network/NetHandlerPlayClient;
+      @|com\welclient\mods\ModPing.java|388|405|NetworkPlayerInfo|class|net.minecraft.client.network.NetworkPlayerInfo
+      @|com\welclient\mods\ModPing.java|413|415|mc|field|com.seuclient.mods.ModPing|mc
+      @|com\welclient\mods\ModPing.java|416|429|getNetHandler|method|net.minecraft.client.Minecraft|getNetHandler|()Lnet/minecraft/client/network/NetHandlerPlayClient;
+      @|com\welclient\mods\ModPing.java|432|445|getPlayerInfo|method|net.minecraft.client.network.NetHandlerPlayClient|getPlayerInfo|(Ljava/util/UUID;)Lnet/minecraft/client/network/NetworkPlayerInfo;
+      @|com\welclient\mods\ModPing.java|446|448|mc|field|com.seuclient.mods.ModPing|mc
+      @|com\welclient\mods\ModPing.java|449|458|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModPing.java|459|470|getUniqueID|method|net.minecraft.entity.Entity|getUniqueID|()Ljava/util/UUID;
+      @|com\welclient\mods\ModPing.java|540|555|getResponseTime|method|net.minecraft.client.network.NetworkPlayerInfo|getResponseTime|()I
+      @|com\welclient\mods\ModPing.java|571|577|String|class|java.lang.String
+      @|com\welclient\mods\ModPing.java|1022|1024|mc|field|com.seuclient.mods.ModPing|mc
+      @|com\welclient\mods\ModPing.java|1025|1040|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModPing.java|1041|1061|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModPing.java|1072|1073|x|param|com.seuclient.mods.ModPing|render|(II)V|x|0
+      @|com\welclient\mods\ModPing.java|1075|1076|y|param|com.seuclient.mods.ModPing|render|(II)V|y|1
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModPing
+endProcessing com\welclient\mods\ModPing.java
+
+processing com\welclient\mods\ModPotions.java
+@|com\welclient\mods\ModPotions.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModPotions
+   @|com\welclient\mods\ModPotions.java|233|242|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModPotions.java|243|245|mc|field|com.seuclient.mods.ModPotions|mc|
+   @|com\welclient\mods\ModPotions.java|248|257|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModPotions.java|258|270|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModPotions.java|295|301|render|method|com.seuclient.mods.ModPotions|render|(II)V
+      @|com\welclient\mods\ModPotions.java|306|307|x|param|com.seuclient.mods.ModPotions|render|(II)V|x|0
+      @|com\welclient\mods\ModPotions.java|313|314|y|param|com.seuclient.mods.ModPotions|render|(II)V|y|1
+      @|com\welclient\mods\ModPotions.java|330|332|mc|field|com.seuclient.mods.ModPotions|mc
+      @|com\welclient\mods\ModPotions.java|333|342|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModPotions.java|377|387|Collection|class|java.util.Collection
+      @|com\welclient\mods\ModPotions.java|388|400|PotionEffect|class|net.minecraft.potion.PotionEffect
+      @|com\welclient\mods\ModPotions.java|412|414|mc|field|com.seuclient.mods.ModPotions|mc
+      @|com\welclient\mods\ModPotions.java|415|424|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModPotions.java|425|447|getActivePotionEffects|method|net.minecraft.entity.EntityLivingBase|getActivePotionEffects|()Ljava/util/Collection;
+      @|com\welclient\mods\ModPotions.java|480|487|isEmpty|method|java.util.Collection|isEmpty|()Z
+      @|com\welclient\mods\ModPotions.java|530|531|y|param|com.seuclient.mods.ModPotions|render|(II)V|y|1
+      @|com\welclient\mods\ModPotions.java|546|558|PotionEffect|class|net.minecraft.potion.PotionEffect
+      @|com\welclient\mods\ModPotions.java|591|597|String|class|java.lang.String
+      @|com\welclient\mods\ModPotions.java|618|631|getEffectName|method|net.minecraft.potion.PotionEffect|getEffectName|()Ljava/lang/String;
+      @|com\welclient\mods\ModPotions.java|668|679|getDuration|method|net.minecraft.potion.PotionEffect|getDuration|()I
+      @|com\welclient\mods\ModPotions.java|746|758|getAmplifier|method|net.minecraft.potion.PotionEffect|getAmplifier|()I
+      @|com\welclient\mods\ModPotions.java|791|797|String|class|java.lang.String
+      @|com\welclient\mods\ModPotions.java|806|812|String|class|java.lang.String
+      @|com\welclient\mods\ModPotions.java|813|819|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      @|com\welclient\mods\ModPotions.java|889|891|mc|field|com.seuclient.mods.ModPotions|mc
+      @|com\welclient\mods\ModPotions.java|892|907|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModPotions.java|908|928|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|com\welclient\mods\ModPotions.java|936|937|x|param|com.seuclient.mods.ModPotions|render|(II)V|x|0
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModPotions
+endProcessing com\welclient\mods\ModPotions.java
+
+processing com\welclient\mods\ModStatusArmadura.java
+@|com\welclient\mods\ModStatusArmadura.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModStatusArmadura
+   @|com\welclient\mods\ModStatusArmadura.java|252|261|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModStatusArmadura.java|262|264|mc|field|com.seuclient.mods.ModStatusArmadura|mc|
+   @|com\welclient\mods\ModStatusArmadura.java|267|276|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModStatusArmadura.java|277|289|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: render(II)V
+      @|com\welclient\mods\ModStatusArmadura.java|314|320|render|method|com.seuclient.mods.ModStatusArmadura|render|(II)V
+      @|com\welclient\mods\ModStatusArmadura.java|325|326|x|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|x|0
+      @|com\welclient\mods\ModStatusArmadura.java|332|333|y|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|y|1
+      @|com\welclient\mods\ModStatusArmadura.java|349|351|mc|field|com.seuclient.mods.ModStatusArmadura|mc
+      @|com\welclient\mods\ModStatusArmadura.java|352|361|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModStatusArmadura.java|396|405|ItemStack|class|net.minecraft.item.ItemStack
+      @|com\welclient\mods\ModStatusArmadura.java|419|421|mc|field|com.seuclient.mods.ModStatusArmadura|mc
+      @|com\welclient\mods\ModStatusArmadura.java|422|431|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|com\welclient\mods\ModStatusArmadura.java|432|441|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|com\welclient\mods\ModStatusArmadura.java|442|456|armorInventory|field|net.minecraft.entity.player.InventoryPlayer|armorInventory
+      Field: Array Length, skipping
+      @|com\welclient\mods\ModStatusArmadura.java|591|600|ItemStack|class|net.minecraft.item.ItemStack
+      @|com\welclient\mods\ModStatusArmadura.java|696|697|y|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|y|1
+      @|com\welclient\mods\ModStatusArmadura.java|789|792|Gui|class|net.minecraft.client.gui.Gui
+      @|com\welclient\mods\ModStatusArmadura.java|793|801|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com\welclient\mods\ModStatusArmadura.java|802|803|x|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|x|0
+      @|com\welclient\mods\ModStatusArmadura.java|814|815|x|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|x|0
+      @|com\welclient\mods\ModStatusArmadura.java|945|957|getMaxDamage|method|net.minecraft.item.ItemStack|getMaxDamage|()I
+      @|com\welclient\mods\ModStatusArmadura.java|998|1011|getItemDamage|method|net.minecraft.item.ItemStack|getItemDamage|()I
+      @|com\welclient\mods\ModStatusArmadura.java|1107|1113|String|class|java.lang.String
+      @|com\welclient\mods\ModStatusArmadura.java|1245|1263|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
+      @|com\welclient\mods\ModStatusArmadura.java|1264|1269|GREEN|field|net.minecraft.util.EnumChatFormatting|GREEN
+      @|com\welclient\mods\ModStatusArmadura.java|1272|1278|String|class|java.lang.String
+      @|com\welclient\mods\ModStatusArmadura.java|1279|1286|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModStatusArmadura.java|1404|1422|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
+      @|com\welclient\mods\ModStatusArmadura.java|1423|1429|YELLOW|field|net.minecraft.util.EnumChatFormatting|YELLOW
+      @|com\welclient\mods\ModStatusArmadura.java|1432|1438|String|class|java.lang.String
+      @|com\welclient\mods\ModStatusArmadura.java|1439|1446|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModStatusArmadura.java|1527|1545|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
+      @|com\welclient\mods\ModStatusArmadura.java|1546|1549|RED|field|net.minecraft.util.EnumChatFormatting|RED
+      @|com\welclient\mods\ModStatusArmadura.java|1552|1558|String|class|java.lang.String
+      @|com\welclient\mods\ModStatusArmadura.java|1559|1566|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModStatusArmadura.java|1633|1635|mc|field|com.seuclient.mods.ModStatusArmadura|mc
+      @|com\welclient\mods\ModStatusArmadura.java|1636|1651|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModStatusArmadura.java|1652|1662|drawString|method|net.minecraft.client.gui.FontRenderer|drawString|(Ljava/lang/String;III)I
+      @|com\welclient\mods\ModStatusArmadura.java|1682|1683|x|param|com.seuclient.mods.ModStatusArmadura|render|(II)V|x|0
+   Method End: render(II)V
+Class End  : com.seuclient.mods.ModStatusArmadura
+endProcessing com\welclient\mods\ModStatusArmadura.java
+
+processing com\welclient\mods\ModTeclas.java
+@|com\welclient\mods\ModTeclas.java|8|26|com.seuclient.mods|package|com.seuclient.mods|(file)
+Class Start: com.seuclient.mods.ModTeclas
+   @|com\welclient\mods\ModTeclas.java|273|282|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModTeclas.java|283|285|mc|field|com.seuclient.mods.ModTeclas|mc|
+   @|com\welclient\mods\ModTeclas.java|288|297|Minecraft|class|net.minecraft.client.Minecraft
+   @|com\welclient\mods\ModTeclas.java|298|310|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|com\welclient\mods\ModTeclas.java|343|350|LARGURA|field|com.seuclient.mods.ModTeclas|LARGURA|
+   @|com\welclient\mods\ModTeclas.java|386|392|ALTURA|field|com.seuclient.mods.ModTeclas|ALTURA|
+   Method Start: render(II)V
+      @|com\welclient\mods\ModTeclas.java|420|426|render|method|com.seuclient.mods.ModTeclas|render|(II)V
+      @|com\welclient\mods\ModTeclas.java|431|432|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|438|439|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|468|471|Gui|class|net.minecraft.client.gui.Gui
+      @|com\welclient\mods\ModTeclas.java|472|480|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com\welclient\mods\ModTeclas.java|481|482|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|484|485|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|487|488|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|491|498|LARGURA|field|com.seuclient.mods.ModTeclas|LARGURA
+      @|com\welclient\mods\ModTeclas.java|500|501|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|504|510|ALTURA|field|com.seuclient.mods.ModTeclas|ALTURA
+      @|com\welclient\mods\ModTeclas.java|561|574|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|575|576|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|583|584|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|586|594|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\mods\ModTeclas.java|595|605|getKeyName|method|org.lwjgl.input.Keyboard|getKeyName|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModTeclas.java|606|608|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|609|621|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|622|636|keyBindForward|field|net.minecraft.client.settings.GameSettings|keyBindForward
+      @|com\welclient\mods\ModTeclas.java|637|647|getKeyCode|method|net.minecraft.client.settings.KeyBinding|getKeyCode|()I
+      @|com\welclient\mods\ModTeclas.java|669|685|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|686|688|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|689|701|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|702|716|keyBindForward|field|net.minecraft.client.settings.GameSettings|keyBindForward
+      @|com\welclient\mods\ModTeclas.java|756|769|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|770|771|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|773|774|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|781|789|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\mods\ModTeclas.java|790|800|getKeyName|method|org.lwjgl.input.Keyboard|getKeyName|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModTeclas.java|801|803|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|804|816|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|817|828|keyBindLeft|field|net.minecraft.client.settings.GameSettings|keyBindLeft
+      @|com\welclient\mods\ModTeclas.java|829|839|getKeyCode|method|net.minecraft.client.settings.KeyBinding|getKeyCode|()I
+      @|com\welclient\mods\ModTeclas.java|861|877|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|878|880|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|881|893|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|894|905|keyBindLeft|field|net.minecraft.client.settings.GameSettings|keyBindLeft
+      @|com\welclient\mods\ModTeclas.java|945|958|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|959|960|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|967|968|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|975|983|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\mods\ModTeclas.java|984|994|getKeyName|method|org.lwjgl.input.Keyboard|getKeyName|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModTeclas.java|995|997|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|998|1010|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1011|1022|keyBindBack|field|net.minecraft.client.settings.GameSettings|keyBindBack
+      @|com\welclient\mods\ModTeclas.java|1023|1033|getKeyCode|method|net.minecraft.client.settings.KeyBinding|getKeyCode|()I
+      @|com\welclient\mods\ModTeclas.java|1055|1071|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1072|1074|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1075|1087|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1088|1099|keyBindBack|field|net.minecraft.client.settings.GameSettings|keyBindBack
+      @|com\welclient\mods\ModTeclas.java|1139|1152|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|1153|1154|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1161|1162|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1169|1177|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\mods\ModTeclas.java|1178|1188|getKeyName|method|org.lwjgl.input.Keyboard|getKeyName|(I)Ljava/lang/String;
+      @|com\welclient\mods\ModTeclas.java|1189|1191|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1192|1204|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1205|1217|keyBindRight|field|net.minecraft.client.settings.GameSettings|keyBindRight
+      @|com\welclient\mods\ModTeclas.java|1218|1228|getKeyCode|method|net.minecraft.client.settings.KeyBinding|getKeyCode|()I
+      @|com\welclient\mods\ModTeclas.java|1250|1266|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1267|1269|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1270|1282|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1283|1295|keyBindRight|field|net.minecraft.client.settings.GameSettings|keyBindRight
+      @|com\welclient\mods\ModTeclas.java|1342|1355|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|1356|1357|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1364|1365|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1381|1397|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1398|1400|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1401|1413|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1414|1425|keyBindJump|field|net.minecraft.client.settings.GameSettings|keyBindJump
+      @|com\welclient\mods\ModTeclas.java|1473|1486|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|1487|1488|x|param|com.seuclient.mods.ModTeclas|render|(II)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1490|1491|y|param|com.seuclient.mods.ModTeclas|render|(II)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1508|1524|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1525|1527|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1528|1540|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|com\welclient\mods\ModTeclas.java|1541|1554|keyBindSprint|field|net.minecraft.client.settings.GameSettings|keyBindSprint
+   Method End: render(II)V
+   Method Start: desenharTecla(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|1586|1599|desenharTecla|method|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V
+      @|com\welclient\mods\ModTeclas.java|1604|1605|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1611|1612|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1614|1620|String|class|java.lang.String
+      @|com\welclient\mods\ModTeclas.java|1621|1626|tecla|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|tecla|2
+      @|com\welclient\mods\ModTeclas.java|1636|1647|pressionada|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|pressionada|3
+      @|com\welclient\mods\ModTeclas.java|1669|1680|pressionada|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|pressionada|3
+      @|com\welclient\mods\ModTeclas.java|1716|1719|Gui|class|net.minecraft.client.gui.Gui
+      @|com\welclient\mods\ModTeclas.java|1720|1728|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com\welclient\mods\ModTeclas.java|1729|1730|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1732|1733|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1735|1736|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1743|1744|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1765|1768|Gui|class|net.minecraft.client.gui.Gui
+      @|com\welclient\mods\ModTeclas.java|1769|1777|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|com\welclient\mods\ModTeclas.java|1778|1779|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1785|1786|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1792|1793|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1800|1801|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1838|1840|mc|field|com.seuclient.mods.ModTeclas|mc
+      @|com\welclient\mods\ModTeclas.java|1841|1856|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|com\welclient\mods\ModTeclas.java|1857|1867|drawString|method|net.minecraft.client.gui.FontRenderer|drawString|(Ljava/lang/String;III)I
+      @|com\welclient\mods\ModTeclas.java|1868|1873|tecla|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|tecla|2
+      @|com\welclient\mods\ModTeclas.java|1875|1876|x|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|x|0
+      @|com\welclient\mods\ModTeclas.java|1882|1883|y|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|y|1
+      @|com\welclient\mods\ModTeclas.java|1889|1900|pressionada|param|com.seuclient.mods.ModTeclas|desenharTecla|(IILjava/lang/String;Z)V|pressionada|3
+   Method End: desenharTecla(IILjava/lang/String;Z)V
+   Method Start: teclaPressionada(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1960|1976|teclaPressionada|method|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z
+      @|com\welclient\mods\ModTeclas.java|1977|1987|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|com\welclient\mods\ModTeclas.java|1988|1998|keyBinding|param|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z|keyBinding|0
+      @|com\welclient\mods\ModTeclas.java|2017|2025|Keyboard|class|org.lwjgl.input.Keyboard
+      @|com\welclient\mods\ModTeclas.java|2026|2035|isKeyDown|method|org.lwjgl.input.Keyboard|isKeyDown|(I)Z
+      @|com\welclient\mods\ModTeclas.java|2036|2046|keyBinding|param|com.seuclient.mods.ModTeclas|teclaPressionada|(Lnet/minecraft/client/settings/KeyBinding;)Z|keyBinding|0
+      @|com\welclient\mods\ModTeclas.java|2047|2057|getKeyCode|method|net.minecraft.client.settings.KeyBinding|getKeyCode|()I
+   Method End: teclaPressionada(Lnet/minecraft/client/settings/KeyBinding;)Z
+Class End  : com.seuclient.mods.ModTeclas
+endProcessing com\welclient\mods\ModTeclas.java
+
