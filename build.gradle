@@ -11,8 +11,8 @@ buildscript {
 apply plugin: "net.minecraftforge.gradle.forge"
 
 version = "1.0.0"
-group = "com.seuclient"
-archivesBaseName = "seu-client"
+group = "com.battleclient"
+archivesBaseName = "BattleClient"
 
 sourceCompatibility = targetCompatibility = "1.8"
 

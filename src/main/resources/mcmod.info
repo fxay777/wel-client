@@ -1,13 +1,13 @@
 [
   {
-    "modid": "seuclient",
-    "name": "Seu Client",
-    "description": "Cliente personalizado com mods visuais",
+    "modid": "battleclient",
+    "name": "Battle Client",
+    "description": "Battle Client - Client PVP Profissional para Minecraft 1.8.9",
     "version": "1.0.0",
     "mcversion": "1.8.9",
     "url": "",
     "updateUrl": "",
-    "authorList": ["SeuNome"],
+    "authorList": ["Battle Client Team"],
     "credits": "",
     "logoFile": "",
     "screenshots": [],
