@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+
+# ForgeGradle run directory
+run/
+
+# IDE files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+# Build artifacts
+*.jar
+*.class
+*.log
