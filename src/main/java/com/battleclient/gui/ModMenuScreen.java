@@ -22,7 +22,7 @@ public class ModMenuScreen extends GuiScreen {
     @Override
     public void initGui() {
         Keyboard.enableRepeatEvents(true);
-        searchField = new GuiTextField(0, fontRendererObj, width / 2 - 100, 48, 200, 18);
+        searchField = new GuiTextField(0, fontRendererObj, width / 2 - 100, 38, 200, 16);
         searchField.setMaxStringLength(32);
         searchField.setFocused(false);
     }
@@ -55,52 +55,51 @@ public class ModMenuScreen extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
 
-        // Top Banner (Azul forte e Preto)
-        Gui.drawRect(0, 0, width, 40, 0xF0000000);
-        Gui.drawRect(0, 39, width, 40, 0xFF0055FF);
+        // Barra Superior Principal (Estilo CheatBreaker / Lunar)
+        Gui.drawRect(0, 0, width, 32, 0xF5101010);
+        Gui.drawRect(0, 31, width, 32, 0xFF0055FF);
 
-        // Logo / Nome
-        fontRendererObj.drawStringWithShadow("§9§lBATTLE §f§lCLIENT", 20, 15, 0xFFFFFFFF);
+        // Branding
+        fontRendererObj.drawStringWithShadow("§9§lBATTLE §f§lCLIENT", 16, 12, 0xFFFFFFFF);
 
-        // Botão HUD Editor no topo à direita
-        int hudBtnX = width - 130;
-        int hudBtnY = 10;
-        boolean hudHover = mouseX >= hudBtnX && mouseX <= hudBtnX + 110 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20;
-        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 110, hudBtnY + 20, hudHover ? 0xFF0055FF : 0xFF151515);
-        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 110, hudBtnY + 1, 0xFF0055FF);
-        drawCenteredString(fontRendererObj, "§f§lHUD EDITOR", hudBtnX + 55, hudBtnY + 6, 0xFFFFFFFF);
-
-        // Abas de categoria no centro do topo
+        // Abas de categorias centralizadas no topo
         int catStartX = width / 2 - (categories.length * 60) / 2;
         for (int i = 0; i < categories.length; i++) {
             String cat = categories[i];
             int cx = catStartX + (i * 60);
             boolean isSelected = cat.equalsIgnoreCase(selectedCategory);
-            boolean isHovered = mouseX >= cx && mouseX <= cx + 55 && mouseY >= 12 && mouseY <= 28;
+            boolean isHovered = mouseX >= cx && mouseX <= cx + 55 && mouseY >= 8 && mouseY <= 24;
 
             if (isSelected) {
-                Gui.drawRect(cx, 12, cx + 55, 28, 0xFF0055FF);
+                Gui.drawRect(cx, 8, cx + 55, 24, 0xFF0055FF);
             } else if (isHovered) {
-                Gui.drawRect(cx, 12, cx + 55, 28, 0x500055FF);
+                Gui.drawRect(cx, 8, cx + 55, 24, 0x400055FF);
             }
 
-            drawCenteredString(fontRendererObj, isSelected ? "§f§l" + cat : "§7" + cat, cx + 27, 16, 0xFFFFFFFF);
+            drawCenteredString(fontRendererObj, isSelected ? "§f§l" + cat : "§7" + cat, cx + 27, 12, 0xFFFFFFFF);
         }
+
+        // Botão HUD EDITOR destacado no topo direito
+        int hudBtnX = width - 135;
+        int hudBtnY = 6;
+        boolean hudHover = mouseX >= hudBtnX && mouseX <= hudBtnX + 120 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20;
+        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 120, hudBtnY + 20, hudHover ? 0xFF0077FF : 0xFF1E1E1E);
+        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 120, hudBtnY + 1, 0xFF0055FF);
+        drawCenteredString(fontRendererObj, "§b§l[✥] HUD EDITOR", hudBtnX + 60, hudBtnY + 6, 0xFFFFFFFF);
 
         // Barra de pesquisa
         searchField.drawTextBox();
         if (searchField.getText().isEmpty() && !searchField.isFocused()) {
-            drawCenteredString(fontRendererObj, "§8Pesquisar mod...", width / 2, 53, 0xFF888888);
+            drawCenteredString(fontRendererObj, "§8Pesquisar mod...", width / 2, 42, 0xFF888888);
         }
 
-        // Filtra mods
+        // Lista de mods
         List<BaseMod> filteredMods = getFilteredMods();
 
-        // Área de exibição dos mods (Grid / Lista com 2 colunas)
-        int listY = 75;
-        int cardWidth = 220;
+        int listY = 64;
+        int cardWidth = 230;
         int cardHeight = 44;
-        int spacing = 10;
+        int spacing = 8;
         int totalCols = Math.max(1, Math.min(2, width / (cardWidth + spacing)));
         int gridStartX = width / 2 - ((cardWidth * totalCols) + (spacing * (totalCols - 1))) / 2;
 
@@ -111,43 +110,44 @@ public class ModMenuScreen extends GuiScreen {
             int cardX = gridStartX + (col * (cardWidth + spacing));
             int cardY = listY + (row * (cardHeight + spacing)) - scrollOffset;
 
-            // Só desenha se estiver visível na janela
-            if (cardY + cardHeight > 70 && cardY < height - 10) {
+            // Só desenha se estiver dentro dos limites da tela visível
+            if (cardY + cardHeight > 58 && cardY < height - 10) {
                 boolean isEnabled = mod.isEnabled();
                 boolean cardHover = mouseX >= cardX && mouseX <= cardX + cardWidth && mouseY >= cardY && mouseY <= cardY + cardHeight;
 
                 // Fundo do card
-                Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + cardHeight, isEnabled ? 0xB0080808 : 0x80050505);
+                Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + cardHeight, isEnabled ? 0xB5121212 : 0x900C0C0C);
                 Gui.drawRect(cardX, cardY, cardX + 3, cardY + cardHeight, isEnabled ? 0xFF0055FF : 0xFF333333);
 
                 if (cardHover) {
-                    Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + 1, 0x500055FF);
+                    Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + 1, 0x400055FF);
                 }
 
-                // Nome do mod e categoria
+                // Nome do mod e badge de categoria
                 fontRendererObj.drawStringWithShadow(mod.getDisplayName(), cardX + 10, cardY + 8, isEnabled ? 0xFFFFFFFF : 0xFFAAAAAA);
-                fontRendererObj.drawStringWithShadow("§8[§b" + mod.getCategory() + "§8]", cardX + 10 + fontRendererObj.getStringWidth(mod.getDisplayName()) + 5, cardY + 8, 0xFF888888);
+                fontRendererObj.drawStringWithShadow("§8[§9" + mod.getCategory() + "§8]", cardX + 10 + fontRendererObj.getStringWidth(mod.getDisplayName()) + 5, cardY + 8, 0xFF888888);
 
                 // Descrição curta
                 String desc = mod.getDescription();
-                if (fontRendererObj.getStringWidth(desc) > 135) {
-                    desc = fontRendererObj.trimStringToWidth(desc, 130) + "...";
+                if (fontRendererObj.getStringWidth(desc) > 140) {
+                    desc = fontRendererObj.trimStringToWidth(desc, 135) + "...";
                 }
-                fontRendererObj.drawStringWithShadow("§7" + desc, cardX + 10, cardY + 22, 0xFF888888);
+                fontRendererObj.drawStringWithShadow("§7" + desc, cardX + 10, cardY + 22, 0xFF777777);
 
                 // Botão de Engrenagem (Settings)
                 int gearX = cardX + cardWidth - 54;
                 int gearY = cardY + 12;
-                boolean gearHover = mouseX >= gearX && mouseX <= gearX + 18 && mouseY >= gearY && mouseY <= gearY + 18;
-                Gui.drawRect(gearX, gearY, gearX + 18, gearY + 18, gearHover ? 0xFF0055FF : 0xFF222222);
-                drawCenteredString(fontRendererObj, "§f⚙", gearX + 9, gearY + 5, 0xFFFFFFFF);
+                boolean gearHover = mouseX >= gearX && mouseX <= gearX + 20 && mouseY >= gearY && mouseY <= gearY + 20;
+                Gui.drawRect(gearX, gearY, gearX + 20, gearY + 20, gearHover ? 0xFF0055FF : 0xFF222222);
+                drawCenteredString(fontRendererObj, "§f⚙", gearX + 10, gearY + 6, 0xFFFFFFFF);
 
-                // Botão Switch ON/OFF
-                int switchX = cardX + cardWidth - 32;
+                // Botão Switch ON / OFF
+                int switchX = cardX + cardWidth - 30;
                 int switchY = cardY + 12;
-                boolean switchHover = mouseX >= switchX && mouseX <= switchX + 26 && mouseY >= switchY && mouseY <= switchY + 18;
-                Gui.drawRect(switchX, switchY, switchX + 26, switchY + 18, isEnabled ? 0xFF0055FF : (switchHover ? 0xFF333333 : 0xFF181818));
-                drawCenteredString(fontRendererObj, isEnabled ? "§a✓" : "§c✕", switchX + 13, switchY + 5, 0xFFFFFFFF);
+                boolean switchHover = mouseX >= switchX && mouseX <= switchX + 24 && mouseY >= switchY && mouseY <= switchY + 20;
+                int switchBg = isEnabled ? 0xFF0055FF : (switchHover ? 0xFF353535 : 0xFF1C1C1C);
+                Gui.drawRect(switchX, switchY, switchX + 24, switchY + 20, switchBg);
+                drawCenteredString(fontRendererObj, isEnabled ? "§a✓" : "§c✕", switchX + 12, switchY + 6, 0xFFFFFFFF);
             }
 
             col++;
@@ -180,31 +180,31 @@ public class ModMenuScreen extends GuiScreen {
         super.mouseClicked(mouseX, mouseY, mouseButton);
         searchField.mouseClicked(mouseX, mouseY, mouseButton);
 
-        // Clique no botão HUD Editor
-        int hudBtnX = width - 130;
-        int hudBtnY = 10;
-        if (mouseX >= hudBtnX && mouseX <= hudBtnX + 110 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20) {
+        // Clique no botão HUD EDITOR
+        int hudBtnX = width - 135;
+        int hudBtnY = 6;
+        if (mouseX >= hudBtnX && mouseX <= hudBtnX + 120 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20) {
             mc.displayGuiScreen(new HUDEditorScreen());
             return;
         }
 
-        // Clique nas categorias
+        // Clique nas abas de categorias
         int catStartX = width / 2 - (categories.length * 60) / 2;
         for (int i = 0; i < categories.length; i++) {
             int cx = catStartX + (i * 60);
-            if (mouseX >= cx && mouseX <= cx + 55 && mouseY >= 12 && mouseY <= 28) {
+            if (mouseX >= cx && mouseX <= cx + 55 && mouseY >= 8 && mouseY <= 24) {
                 selectedCategory = categories[i];
                 scrollOffset = 0;
                 return;
             }
         }
 
-        // Clique nos cards de mods (toggle ou engrenagem)
+        // Clique nos cards de mods
         List<BaseMod> filteredMods = getFilteredMods();
-        int listY = 75;
-        int cardWidth = 220;
+        int listY = 64;
+        int cardWidth = 230;
         int cardHeight = 44;
-        int spacing = 10;
+        int spacing = 8;
         int totalCols = Math.max(1, Math.min(2, width / (cardWidth + spacing)));
         int gridStartX = width / 2 - ((cardWidth * totalCols) + (spacing * (totalCols - 1))) / 2;
 
@@ -215,20 +215,20 @@ public class ModMenuScreen extends GuiScreen {
             int cardX = gridStartX + (col * (cardWidth + spacing));
             int cardY = listY + (row * (cardHeight + spacing)) - scrollOffset;
 
-            if (cardY + cardHeight > 70 && cardY < height - 10) {
+            if (cardY + cardHeight > 58 && cardY < height - 10) {
                 int gearX = cardX + cardWidth - 54;
                 int gearY = cardY + 12;
-                int switchX = cardX + cardWidth - 32;
+                int switchX = cardX + cardWidth - 30;
                 int switchY = cardY + 12;
 
-                // Engrenagem clicada
-                if (mouseX >= gearX && mouseX <= gearX + 18 && mouseY >= gearY && mouseY <= gearY + 18) {
+                // Engrenagem (Abrir Settings do Mod)
+                if (mouseX >= gearX && mouseX <= gearX + 20 && mouseY >= gearY && mouseY <= gearY + 20) {
                     mc.displayGuiScreen(new ModSettingsScreen(this, mod));
                     return;
                 }
 
-                // Switch ou card clicado
-                if (mouseX >= switchX && mouseX <= switchX + 26 && mouseY >= switchY && mouseY <= switchY + 18) {
+                // Switch ON/OFF ou Card
+                if (mouseX >= switchX && mouseX <= switchX + 24 && mouseY >= switchY && mouseY <= switchY + 20) {
                     mod.toggle();
                     Config.salvar();
                     return;
@@ -247,6 +247,11 @@ public class ModMenuScreen extends GuiScreen {
     protected void keyTyped(char typedChar, int keyCode) throws IOException {
         if (searchField.textboxKeyTyped(typedChar, keyCode)) {
             scrollOffset = 0;
+            return;
+        }
+        if (keyCode == Keyboard.KEY_ESCAPE || keyCode == Keyboard.KEY_RSHIFT) {
+            Config.salvar();
+            mc.displayGuiScreen(null);
             return;
         }
         super.keyTyped(typedChar, keyCode);

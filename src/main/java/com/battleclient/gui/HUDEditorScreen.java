@@ -6,7 +6,8 @@ import com.battleclient.mods.BaseMod;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import org.lwjgl.input.Mouse;
+import net.minecraft.client.renderer.GlStateManager;
+import org.lwjgl.input.Keyboard;
 
 import java.io.IOException;
 
@@ -18,8 +19,10 @@ public class HUDEditorScreen extends GuiScreen {
     @Override
     public void initGui() {
         this.buttonList.clear();
-        this.buttonList.add(new GuiButton(0, width / 2 - 105, height - 32, 100, 20, "Salvar & Fechar"));
-        this.buttonList.add(new GuiButton(1, width / 2 + 5, height - 32, 100, 20, "Resetar Padrões"));
+        int btnW = 120;
+        int btnH = 20;
+        this.buttonList.add(new GuiButton(0, width / 2 - btnW - 5, height - 32, btnW, btnH, "§aSalvar & Sair"));
+        this.buttonList.add(new GuiButton(1, width / 2 + 5, height - 32, btnW, btnH, "§cResetar Posições"));
     }
 
     @Override
@@ -33,7 +36,7 @@ public class HUDEditorScreen extends GuiScreen {
                 if (mod.isHUD()) {
                     mod.setX(10);
                     mod.setY(yOffset);
-                    yOffset += mod.getHeight() + 4;
+                    yOffset += mod.getHeight() + 6;
                     if (yOffset > height - 60) {
                         yOffset = 10;
                     }
@@ -45,48 +48,57 @@ public class HUDEditorScreen extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        // Fundo escurecido transparente
+        // Fundo escurecido semi-transparente
         drawDefaultBackground();
 
-        // Título e instruções
-        drawCenteredString(fontRendererObj, "§9§lBATTLE CLIENT §8- §fHUD EDITOR", width / 2, 12, 0xFFFFFFFF);
-        drawCenteredString(fontRendererObj, "§7Arraste os elementos com o mouse para posicioná-los na tela", width / 2, 24, 0xFFAAAAAA);
+        // Barra de topo com branding
+        Gui.drawRect(0, 0, width, 28, 0xDD0a0a0a);
+        Gui.drawRect(0, 27, width, 28, 0xFF0055FF);
 
-        // Renderiza as caixas de cada mod HUD
+        drawCenteredString(fontRendererObj, "§9§lBATTLE CLIENT §8— §fHUD EDITOR", width / 2, 6, 0xFFFFFFFF);
+        drawCenteredString(fontRendererObj, "§7Clique e arraste qualquer elemento do HUD para escolher onde ele fica na tela", width / 2, 17, 0xFFAAAAAA);
+
+        // Se estiver arrastando, atualiza a posição e faz snap suave às bordas
+        if (draggingMod != null) {
+            int newX = mouseX - dragOffsetX;
+            int newY = mouseY - dragOffsetY;
+
+            // Snap magnético às bordas (distância <= 10px)
+            if (Math.abs(newX) < 10) newX = 4;
+            if (Math.abs(newX + draggingMod.getWidth() - width) < 10) newX = width - draggingMod.getWidth() - 4;
+            if (Math.abs(newY - 30) < 10) newY = 32;
+            if (Math.abs(newY + draggingMod.getHeight() - height) < 10) newY = height - draggingMod.getHeight() - 4;
+
+            draggingMod.setX(Math.max(2, Math.min(width - draggingMod.getWidth() - 2, newX)));
+            draggingMod.setY(Math.max(30, Math.min(height - draggingMod.getHeight() - 2, newY)));
+        }
+
+        // Renderiza as caixas e previews de todos os mods HUD ativos
         for (BaseMod mod : ModManager.getInstance().getMods()) {
             if (mod.isHUD() && mod.isEnabled()) {
                 int mx = mod.getX();
                 int my = mod.getY();
-                int mw = mod.getWidth();
-                int mh = mod.getHeight();
+                int mw = Math.max(20, mod.getWidth());
+                int mh = Math.max(12, mod.getHeight());
 
+                boolean isDragging = (mod == draggingMod);
                 boolean hovered = mouseX >= mx && mouseX <= mx + mw && mouseY >= my && mouseY <= my + mh;
 
-                // Desenha a caixa do elemento
-                if (mod == draggingMod) {
-                    Gui.drawRect(mx, my, mx + mw, my + mh, 0x800055FF);
-                } else if (hovered) {
-                    Gui.drawRect(mx, my, mx + mw, my + mh, 0x600055FF);
-                } else {
-                    Gui.drawRect(mx, my, mx + mw, my + mh, 0x50000000);
-                }
+                // Fundo do elemento no editor
+                int bgColor = isDragging ? 0x700055FF : (hovered ? 0x500055FF : 0x40000000);
+                Gui.drawRect(mx, my, mx + mw, my + mh, bgColor);
 
-                // Borda azul forte
-                Gui.drawRect(mx, my, mx + mw, my + 1, 0xFF0055FF);
-                Gui.drawRect(mx, my, mx + 1, my + mh, 0xFF0055FF);
-                Gui.drawRect(mx + mw - 1, my, mx + mw, my + mh, 0xFF0055FF);
-                Gui.drawRect(mx, my + mh - 1, mx + mw, my + mh, 0xFF0055FF);
+                // Contorno azul estilo CheatBreaker / Lunar
+                int borderColor = isDragging ? 0xFF55FFFF : (hovered ? 0xFF0088FF : 0xFF0055FF);
+                Gui.drawRect(mx, my, mx + mw, my + 1, borderColor);
+                Gui.drawRect(mx, my, mx + 1, my + mh, borderColor);
+                Gui.drawRect(mx + mw - 1, my, mx + mw, my + mh, borderColor);
+                Gui.drawRect(mx, my + mh - 1, mx + mw, my + mh, borderColor);
 
-                // Nome do mod e coordenadas
-                String info = mod.getDisplayName() + " §8[" + mx + "," + my + "]";
-                fontRendererObj.drawStringWithShadow(info, mx + 3, my + (mh - 8) / 2, 0xFFFFFFFF);
+                // Nome e coordenadas do mod
+                String label = "§f" + mod.getDisplayName() + " §8[" + mx + ", " + my + "]";
+                fontRendererObj.drawStringWithShadow(label, mx + 3, my + (mh - 8) / 2, 0xFFFFFFFF);
             }
-        }
-
-        // Se estiver arrastando
-        if (draggingMod != null) {
-            draggingMod.setX(Math.max(0, Math.min(width - draggingMod.getWidth(), mouseX - dragOffsetX)));
-            draggingMod.setY(Math.max(0, Math.min(height - draggingMod.getHeight(), mouseY - dragOffsetY)));
         }
 
         super.drawScreen(mouseX, mouseY, partialTicks);
@@ -101,8 +113,8 @@ public class HUDEditorScreen extends GuiScreen {
                 if (mod.isHUD() && mod.isEnabled()) {
                     int mx = mod.getX();
                     int my = mod.getY();
-                    int mw = mod.getWidth();
-                    int mh = mod.getHeight();
+                    int mw = Math.max(20, mod.getWidth());
+                    int mh = Math.max(12, mod.getHeight());
 
                     if (mouseX >= mx && mouseX <= mx + mw && mouseY >= my && mouseY <= my + mh) {
                         draggingMod = mod;
@@ -122,6 +134,16 @@ public class HUDEditorScreen extends GuiScreen {
             draggingMod = null;
             Config.salvar();
         }
+    }
+
+    @Override
+    protected void keyTyped(char typedChar, int keyCode) throws IOException {
+        if (keyCode == Keyboard.KEY_ESCAPE || keyCode == Keyboard.KEY_H) {
+            Config.salvar();
+            mc.displayGuiScreen(null);
+            return;
+        }
+        super.keyTyped(typedChar, keyCode);
     }
 
     @Override
