@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -20,7 +20,7 @@ public class ModFPS extends BaseMod {
 
         showBackground = new BooleanSetting("bg", "Fundo Escuro", true);
         textColor = new ColorSetting("color", "Cor do Texto", 0xFF0055FF);
-        style = new ModeSetting("style", "Estilo", 0, "Padrão", "Apenas Número", "Colorido");
+        style = new ModeSetting("style", "Estilo", 0, "Padrao", "Apenas Numero", "Colorido");
 
         addSetting(showBackground);
         addSetting(textColor);
@@ -32,7 +32,7 @@ public class ModFPS extends BaseMod {
         int fps = Minecraft.getDebugFPS();
         String text;
 
-        if (style.is("Apenas Número")) {
+        if (style.is("Apenas Numero")) {
             text = String.valueOf(fps);
         } else {
             text = "FPS: " + fps;

@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -24,7 +24,7 @@ public class ModCPS extends BaseMod {
         this.width = 65;
         this.height = 14;
 
-        showRightClick = new BooleanSetting("showRight", "Mostrar Botão Direito", true);
+        showRightClick = new BooleanSetting("showRight", "Mostrar Botao Direito", true);
         showBackground = new BooleanSetting("bg", "Fundo Escuro", true);
         textColor = new ColorSetting("color", "Cor do Texto", 0xFF0055FF);
 

@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ModeSetting;
@@ -68,7 +68,7 @@ public class ModFreelook extends BaseMod {
 
         keyPressedLastTick = isKeyDown;
 
-        // Se ativo e em tela de jogo, atualiza a rotação da câmera com o mouse
+        // Se ativo e em tela de jogo, atualiza a rotacao da câmera com o mouse
         if (active && mc.currentScreen == null) {
             float sens = mc.gameSettings.mouseSensitivity * 0.6F + 0.2F;
             float factor = sens * sens * sens * 8.0F;

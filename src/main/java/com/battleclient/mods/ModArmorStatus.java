@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -23,22 +23,22 @@ public class ModArmorStatus extends BaseMod {
     private final ColorSetting textColor;
 
     public ModArmorStatus() {
-        super("armorstatus", "Armor Status", "Exibe as peças de armadura e o item da mão com contagem e durabilidade", "HUD");
+        super("armorstatus", "Armor Status", "Exibe as pecas de armadura e o item da mao com contagem e durabilidade", "HUD");
         instance = this;
         this.x = 10;
         this.y = 160;
         this.width = 50;
         this.height = 80;
 
-        showHeldItem = new BooleanSetting("showHeld", "Show Held Item", "Exibir item segurado na mão", true);
-        showDamageNumbers = new BooleanSetting("showDamage", "Show Damage Numbers", "Exibir número de durabilidade", true);
+        showHeldItem = new BooleanSetting("showHeld", "Show Held Item", "Exibir item segurado na mao", true);
+        showDamageNumbers = new BooleanSetting("showDamage", "Show Damage Numbers", "Exibir numero de durabilidade", true);
         dynamicDamageColor = new BooleanSetting("dynamicColor", "Damage Dynamic Color", "Mudar cor conforme a armadura desgasta", true);
-        textAlignment = new ModeSetting("textAlign", "Text Alignment", "Posição do texto em relação ao ícone", 0, "Esquerda", "Direita");
+        textAlignment = new ModeSetting("textAlign", "Text Alignment", "Posicao do texto em relacao ao icone", 0, "Esquerda", "Direita");
         damageDisplayMode = new ModeSetting("damageMode", "Damage Display Mode", "Formato da durabilidade", 0, "Valor Restante", "Porcentagem");
-        orientation = new ModeSetting("orientation", "Orientation", "Orientação dos itens", 0, "Vertical", "Horizontal");
+        orientation = new ModeSetting("orientation", "Orientation", "Orientacao dos itens", 0, "Vertical", "Horizontal");
         showBackground = new BooleanSetting("bg", "Background Box", "Exibir caixa de fundo escuro", false);
         scale = new NumberSetting("scale", "Scale", "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
-        textColor = new ColorSetting("color", "Text Color", "Cor padrão do texto", 0xFFFFFFFF);
+        textColor = new ColorSetting("color", "Text Color", "Cor padrao do texto", 0xFFFFFFFF);
 
         addSetting(showHeldItem);
         addSetting(showDamageNumbers);
@@ -84,7 +84,7 @@ public class ModArmorStatus extends BaseMod {
         int curX = renderX;
         int curY = renderY;
 
-        // Capacete (3), Peitoral (2), Calças (1), Botas (0)
+        // Capacete (3), Peitoral (2), Calcas (1), Botas (0)
         for (int i = 3; i >= 0; i--) {
             renderSlot(armor[i], curX, curY, textLeft);
             if (isVert) curY += slotSize;

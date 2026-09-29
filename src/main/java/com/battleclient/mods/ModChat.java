@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.NumberSetting;
@@ -11,12 +11,12 @@ public class ModChat extends BaseMod {
     private final NumberSetting chatWidth;
 
     public ModChat() {
-        super("chat", "Chat Mod", "Personaliza o chat (timestamps, transparência e largura)", "HUD");
+        super("chat", "Chat Mod", "Personaliza o chat (timestamps, transparencia e largura)", "HUD");
         instance = this;
         this.width = 120;
         this.height = 30;
 
-        showTimestamps = new BooleanSetting("timestamps", "Mostrar Horário [HH:mm]", false);
+        showTimestamps = new BooleanSetting("timestamps", "Mostrar Horario [HH:mm]", false);
         transparentBackground = new BooleanSetting("transBg", "Fundo Totalmente Transparente", false);
         chatWidth = new NumberSetting("chatWidth", "Largura do Chat", 320, 200, 500, 20);
 

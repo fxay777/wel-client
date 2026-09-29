@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 
@@ -8,7 +8,7 @@ public class ModScrollableTooltips extends BaseMod {
     private final BooleanSetting wrapText;
 
     public ModScrollableTooltips() {
-        super("scrollabletooltips", "Scrollable Tooltips", "Permite rolar descrições longas de itens que passam da tela", "Utility");
+        super("scrollabletooltips", "Scrollable Tooltips", "Permite rolar descricoes longas de itens que passam da tela", "Utility");
         instance = this;
 
         wrapText = new BooleanSetting("wrap", "Quebrar Linhas Automaticamente", true);

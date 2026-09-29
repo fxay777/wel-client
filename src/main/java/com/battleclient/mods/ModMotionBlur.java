@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.NumberSetting;
 
@@ -8,7 +8,7 @@ public class ModMotionBlur extends BaseMod {
     private final NumberSetting blurAmount;
 
     public ModMotionBlur() {
-        super("motionblur", "Motion Blur", "Aplica desfoque de movimento suave e cinematográfico na câmera", "Visual");
+        super("motionblur", "Motion Blur", "Aplica desfoque de movimento suave e cinematografico na câmera", "Visual");
         instance = this;
 
         blurAmount = new NumberSetting("blurAmount", "Intensidade do Blur", 4.0, 1.0, 10.0, 1.0);

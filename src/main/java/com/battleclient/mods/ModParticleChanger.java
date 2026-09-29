@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ModeSetting;
@@ -16,12 +16,12 @@ public class ModParticleChanger extends BaseMod {
     private final BooleanSetting alwaysCrit;
 
     public ModParticleChanger() {
-        super("particlechanger", "Particle Changer", "Multiplica partículas de ataques (Críticos, Fogo, Corações)", "Visual");
+        super("particlechanger", "Particle Changer", "Multiplica particulas de ataques (Criticos, Fogo, Coracoes)", "Visual");
         instance = this;
 
-        particleType = new ModeSetting("type", "Tipo de Partícula", 0, "Crítico", "Magia (Enchant)", "Corações", "Fogo");
-        multiplier = new NumberSetting("multiplier", "Multiplicador de Partículas", 2.0, 1.0, 5.0, 1.0);
-        alwaysCrit = new BooleanSetting("alwaysCrit", "Sempre Gerar Crítico", true);
+        particleType = new ModeSetting("type", "Tipo de Particula", 0, "Critico", "Magia (Enchant)", "Coracoes", "Fogo");
+        multiplier = new NumberSetting("multiplier", "Multiplicador de Particulas", 2.0, 1.0, 5.0, 1.0);
+        alwaysCrit = new BooleanSetting("alwaysCrit", "Sempre Gerar Critico", true);
 
         addSetting(particleType);
         addSetting(multiplier);
@@ -33,7 +33,7 @@ public class ModParticleChanger extends BaseMod {
 
         EnumParticleTypes type = EnumParticleTypes.CRIT;
         if (particleType.is("Magia (Enchant)")) type = EnumParticleTypes.CRIT_MAGIC;
-        else if (particleType.is("Corações")) type = EnumParticleTypes.HEART;
+        else if (particleType.is("Coracoes")) type = EnumParticleTypes.HEART;
         else if (particleType.is("Fogo")) type = EnumParticleTypes.FLAME;
 
         int count = multiplier.getIntValue() * 5;

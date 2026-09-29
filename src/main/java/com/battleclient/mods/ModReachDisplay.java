@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -37,9 +37,9 @@ public class ModReachDisplay extends BaseMod {
         displayFormat = new ModeSetting("format", "Format", "Estilo de texto", 0, "X.XX blocks", "Reach: X.XX", "X.XXm");
         dynamicColor = new BooleanSetting("dynamicColor", "Dynamic Color", "Cor muda conforme a distância do golpe", true);
         showBackground = new BooleanSetting("bg", "Background Box", "Exibir caixa de fundo escuro", false);
-        displayDuration = new NumberSetting("duration", "Display Time (s)", "Tempo de exibição antes de sumir", 2.5, 1.0, 5.0, 0.5);
+        displayDuration = new NumberSetting("duration", "Display Time (s)", "Tempo de exibicao antes de sumir", 2.5, 1.0, 5.0, 0.5);
         scale = new NumberSetting("scale", "Scale", "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
-        textColor = new ColorSetting("color", "Text Color", "Cor padrão do texto", 0xFF00AAFF);
+        textColor = new ColorSetting("color", "Text Color", "Cor padrao do texto", 0xFF00AAFF);
 
         addSetting(displayFormat);
         addSetting(dynamicColor);
@@ -59,7 +59,7 @@ public class ModReachDisplay extends BaseMod {
         if (mop != null && mop.hitVec != null) {
             dist = eyes.distanceTo(mop.hitVec);
         } else {
-            // Calcula distância até o ponto mais próximo da bounding box do alvo
+            // Calcula distância ate o ponto mais proximo da bounding box do alvo
             AxisAlignedBB bb = target.getEntityBoundingBox();
             double cx = Math.max(bb.minX, Math.min(eyes.xCoord, bb.maxX));
             double cy = Math.max(bb.minY, Math.min(eyes.yCoord, bb.maxY));
@@ -67,7 +67,7 @@ public class ModReachDisplay extends BaseMod {
             dist = eyes.distanceTo(new Vec3(cx, cy, cz));
         }
 
-        // Limita a valores plausíveis de Minecraft vanilla (max ~4.5 blocks)
+        // Limita a valores plausiveis de Minecraft vanilla (max ~4.5 blocks)
         if (dist > 0.05 && dist < 7.0) {
             this.lastReachDistance = dist;
             this.lastHitTime = System.currentTimeMillis();
@@ -112,7 +112,7 @@ public class ModReachDisplay extends BaseMod {
         int color = textColor.getValue();
         if (dynamicColor.isEnabled()) {
             if (lastReachDistance >= 3.0) {
-                color = 0xFF55FFFF; // Ciano / Azul alcance máximo
+                color = 0xFF55FFFF; // Ciano / Azul alcance maximo
             } else if (lastReachDistance >= 2.5) {
                 color = 0xFF55FF55; // Verde
             } else {

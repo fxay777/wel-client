@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -16,7 +16,7 @@ public class ModToggleSprint extends BaseMod {
     private boolean sprintToggled = true;
 
     public ModToggleSprint() {
-        super("togglesprint", "Toggle Sprint", "Mantém a corrida (Sprint) sempre ativada automaticamente", "Gameplay");
+        super("togglesprint", "Toggle Sprint", "Mantem a corrida (Sprint) sempre ativada automaticamente", "Gameplay");
         instance = this;
         this.x = 10;
         this.y = 362;
@@ -35,7 +35,7 @@ public class ModToggleSprint extends BaseMod {
     @Override
     public void onTick(TickEvent.ClientTickEvent event) {
         if (mc.thePlayer != null && sprintToggled) {
-            // Se o player está andando para frente e tem comida, mantém sprint ativo
+            // Se o player esta andando para frente e tem comida, mantem sprint ativo
             if (mc.gameSettings.keyBindForward.isKeyDown() && !mc.thePlayer.isSneaking() && !mc.thePlayer.isCollidedHorizontally) {
                 mc.thePlayer.setSprinting(true);
             }
@@ -48,9 +48,9 @@ public class ModToggleSprint extends BaseMod {
 
         String text = "[Sprinting (Toggled)]";
         if (mc.thePlayer.isSprinting()) {
-            text = "§9[Sprinting (Ativo)]";
+            text = "\u00A79[Sprinting (Ativo)]";
         } else {
-            text = "§7[Sprinting (Pronto)]";
+            text = "\u00A77[Sprinting (Pronto)]";
         }
 
         this.width = mc.fontRendererObj.getStringWidth(text) + 8;

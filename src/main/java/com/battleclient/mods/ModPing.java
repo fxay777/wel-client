@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -10,7 +10,7 @@ public class ModPing extends BaseMod {
     private final ColorSetting textColor;
 
     public ModPing() {
-        super("ping", "Ping Display", "Mostra a latência com o servidor multiplayer em ms", "HUD");
+        super("ping", "Ping Display", "Mostra a latencia com o servidor multiplayer em ms", "HUD");
         this.x = 10;
         this.y = 46;
         this.width = 54;

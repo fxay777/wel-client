@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -20,7 +20,7 @@ public class ModCrosshair extends BaseMod {
     private final NumberSetting thickness;
 
     public ModCrosshair() {
-        super("crosshair", "Custom Crosshair", "Mira totalmente personalizável (Cruz, Ponto, Tamanho, Cor, Target Highlight)", "HUD");
+        super("crosshair", "Custom Crosshair", "Mira totalmente personalizavel (Cruz, Ponto, Tamanho, Cor, Target Highlight)", "HUD");
         instance = this;
 
         style = new ModeSetting("style", "Tipo de Mira", 0, "Cruz", "Ponto", "Cruz com Ponto");

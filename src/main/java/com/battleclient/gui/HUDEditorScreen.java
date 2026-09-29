@@ -1,4 +1,4 @@
-package com.battleclient.gui;
+﻿package com.battleclient.gui;
 
 import com.battleclient.core.Config;
 import com.battleclient.core.ModManager;
@@ -6,7 +6,6 @@ import com.battleclient.mods.BaseMod;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.input.Keyboard;
 
 import java.io.IOException;
@@ -21,8 +20,8 @@ public class HUDEditorScreen extends GuiScreen {
         this.buttonList.clear();
         int btnW = 120;
         int btnH = 20;
-        this.buttonList.add(new GuiButton(0, width / 2 - btnW - 5, height - 32, btnW, btnH, "§aSalvar & Sair"));
-        this.buttonList.add(new GuiButton(1, width / 2 + 5, height - 32, btnW, btnH, "§cResetar Posições"));
+        this.buttonList.add(new GuiButton(0, width / 2 - btnW - 5, height - 32, btnW, btnH, "\u00A7aSalvar e Sair"));
+        this.buttonList.add(new GuiButton(1, width / 2 + 5, height - 32, btnW, btnH, "\u00A7cResetar Posicoes"));
     }
 
     @Override
@@ -55,15 +54,15 @@ public class HUDEditorScreen extends GuiScreen {
         Gui.drawRect(0, 0, width, 28, 0xDD0a0a0a);
         Gui.drawRect(0, 27, width, 28, 0xFF0055FF);
 
-        drawCenteredString(fontRendererObj, "§9§lBATTLE CLIENT §8— §fHUD EDITOR", width / 2, 6, 0xFFFFFFFF);
-        drawCenteredString(fontRendererObj, "§7Clique e arraste qualquer elemento do HUD para escolher onde ele fica na tela", width / 2, 17, 0xFFAAAAAA);
+        drawCenteredString(fontRendererObj, "\u00A79\u00A7lBATTLE CLIENT \u00A78- \u00A7fHUD EDITOR", width / 2, 6, 0xFFFFFFFF);
+        drawCenteredString(fontRendererObj, "\u00A77Clique e arraste qualquer elemento do HUD para escolher onde ele fica na tela", width / 2, 17, 0xFFAAAAAA);
 
-        // Se estiver arrastando, atualiza a posição e faz snap suave às bordas
+        // Se estiver arrastando, atualiza a posicao e faz snap suave as bordas
         if (draggingMod != null) {
             int newX = mouseX - dragOffsetX;
             int newY = mouseY - dragOffsetY;
 
-            // Snap magnético às bordas (distância <= 10px)
+            // Snap magnetico as bordas (distancia <= 10px)
             if (Math.abs(newX) < 10) newX = 4;
             if (Math.abs(newX + draggingMod.getWidth() - width) < 10) newX = width - draggingMod.getWidth() - 4;
             if (Math.abs(newY - 30) < 10) newY = 32;
@@ -90,13 +89,10 @@ public class HUDEditorScreen extends GuiScreen {
 
                 // Contorno azul estilo CheatBreaker / Lunar
                 int borderColor = isDragging ? 0xFF55FFFF : (hovered ? 0xFF0088FF : 0xFF0055FF);
-                Gui.drawRect(mx, my, mx + mw, my + 1, borderColor);
-                Gui.drawRect(mx, my, mx + 1, my + mh, borderColor);
-                Gui.drawRect(mx + mw - 1, my, mx + mw, my + mh, borderColor);
-                Gui.drawRect(mx, my + mh - 1, mx + mw, my + mh, borderColor);
+                RenderUtil.drawBorder(mx, my, mw, mh, 1, borderColor);
 
                 // Nome e coordenadas do mod
-                String label = "§f" + mod.getDisplayName() + " §8[" + mx + ", " + my + "]";
+                String label = "\u00A7f" + mod.getDisplayName() + " \u00A78[" + mx + ", " + my + "]";
                 fontRendererObj.drawStringWithShadow(label, mx + 3, my + (mh - 8) / 2, 0xFFFFFFFF);
             }
         }

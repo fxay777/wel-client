@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ModeSetting;
@@ -24,16 +24,16 @@ public class ModAnimations extends BaseMod {
     private final NumberSetting swingSpeed;
 
     public ModAnimations() {
-        super("animations", "1.7.10 Animations", "Restaura fielmente as animações clássicas de combate e itens da versão 1.7.10", "Visual");
+        super("animations", "1.7.10 Animations", "Restaura fielmente as animacoes classicas de combate e itens da versao 1.7.10", "Visual");
         instance = this;
 
-        blockHit = new BooleanSetting("blockhit", "1.7 Blockhit", "Animação de bater e defender com a espada levantada", true);
+        blockHit = new BooleanSetting("blockhit", "1.7 Blockhit", "Animacao de bater e defender com a espada levantada", true);
         oldItemSwitch = new BooleanSetting("oldSwitch", "Smooth Item Switch", "Impede o item de descer bruscamente na troca de slots", true);
-        oldBow = new BooleanSetting("oldBow", "1.7 Bow Animation", "Posicionamento clássico do arco puxado", true);
-        oldEating = new BooleanSetting("oldEating", "1.7 Eating & Drinking", "Animação clássica ao comer ou tomar poção", true);
-        oldSneaking = new BooleanSetting("oldSneak", "1.7 Smooth Sneak", "Transição suave de câmera ao agachar", true);
-        blockHitStyle = new ModeSetting("style", "Blockhit Style", "Estilo do blockhit", 0, "1.7 Clássico", "Smooth 1.7", "Exhibition");
-        swingSpeed = new NumberSetting("swingSpeed", "Swing Animation Speed", "Velocidade da animação do braço", 1.0, 0.5, 2.0, 0.1);
+        oldBow = new BooleanSetting("oldBow", "1.7 Bow Animation", "Posicionamento classico do arco puxado", true);
+        oldEating = new BooleanSetting("oldEating", "1.7 Eating & Drinking", "Animacao classica ao comer ou tomar pocao", true);
+        oldSneaking = new BooleanSetting("oldSneak", "1.7 Smooth Sneak", "Transicao suave de câmera ao agachar", true);
+        blockHitStyle = new ModeSetting("style", "Blockhit Style", "Estilo do blockhit", 0, "1.7 Classico", "Smooth 1.7", "Exhibition");
+        swingSpeed = new NumberSetting("swingSpeed", "Swing Animation Speed", "Velocidade da animacao do braco", 1.0, 0.5, 2.0, 0.1);
 
         addSetting(blockHit);
         addSetting(oldItemSwitch);
@@ -71,7 +71,7 @@ public class ModAnimations extends BaseMod {
     }
 
     /**
-     * Aplica transformações clássicas de 1.7.10 no item segurado durante o swing / block
+     * Aplica transformacoes classicas de 1.7.10 no item segurado durante o swing / block
      */
     public void transformItemFirstPerson(float equipProgress, float swingProgress) {
         if (!enabled) return;
@@ -86,7 +86,7 @@ public class ModAnimations extends BaseMod {
             float swing = MathHelper.sin(swingProgress * swingProgress * (float) Math.PI);
             float swingSqrt = MathHelper.sin(MathHelper.sqrt_float(swingProgress) * (float) Math.PI);
 
-            if (blockHitStyle.is("1.7 Clássico")) {
+            if (blockHitStyle.is("1.7 Classico")) {
                 GlStateManager.translate(-0.15F, 0.15F, -0.05F);
                 GlStateManager.rotate(-swingSqrt * 20.0F, 0.0F, 1.0F, 0.0F);
                 GlStateManager.rotate(-swing * 20.0F, 1.0F, 0.0F, 0.0F);

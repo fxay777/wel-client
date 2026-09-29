@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -10,7 +10,7 @@ public class ModDirectionHUD extends BaseMod {
     private final ColorSetting textColor;
 
     public ModDirectionHUD() {
-        super("directionhud", "Direction HUD", "Exibe a direção da bússola em tempo real (N, S, L, O e Graus)", "HUD");
+        super("directionhud", "Direction HUD", "Exibe a direcao da bussola em tempo real (N, S, L, O e Graus)", "HUD");
         this.x = 10;
         this.y = 308;
         this.width = 65;

@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.ModeSetting;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -9,10 +9,10 @@ public class ModWeatherChanger extends BaseMod {
     private final ModeSetting weatherMode;
 
     public ModWeatherChanger() {
-        super("weatherchanger", "Weather Changer", "Força clima limpo client-side para máximo FPS e visibilidade", "Visual");
+        super("weatherchanger", "Weather Changer", "Forca clima limpo client-side para maximo FPS e visibilidade", "Visual");
         instance = this;
 
-        weatherMode = new ModeSetting("weather", "Clima Forçado", 0, "Ensolarado (Limpo)", "Chuva", "Neve");
+        weatherMode = new ModeSetting("weather", "Clima Forcado", 0, "Ensolarado (Limpo)", "Chuva", "Neve");
         addSetting(weatherMode);
     }
 

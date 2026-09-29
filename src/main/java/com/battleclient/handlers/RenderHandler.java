@@ -1,4 +1,4 @@
-package com.battleclient.handlers;
+﻿package com.battleclient.handlers;
 
 import com.battleclient.core.ModManager;
 import com.battleclient.mods.*;
@@ -61,7 +61,7 @@ public class RenderHandler {
     @SubscribeEvent
     public void onRenderHand(RenderHandEvent event) {
         if (ModAnimations.instance != null && ModAnimations.instance.isEnabled()) {
-            // Aplica transformações adicionais quando em blockhit
+            // Aplica transformacoes adicionais quando em blockhit
             ModAnimations.instance.transformItemFirstPerson(0.0F, event.partialTicks);
         }
     }

@@ -1,4 +1,4 @@
-package com.battleclient.gui;
+﻿package com.battleclient.gui;
 
 import com.battleclient.core.Config;
 import com.battleclient.core.settings.BooleanSetting;
@@ -54,53 +54,49 @@ public class ModSettingsScreen extends GuiScreen {
         Gui.drawRect(modalX, modalY + 27, modalX + modalW, modalY + 28, 0xFF0055FF);
 
         // Borda sutil da janela
-        Gui.drawRect(modalX, modalY, modalX + modalW, modalY + 1, 0x40FFFFFF);
-        Gui.drawRect(modalX, modalY, modalX + 1, modalY + modalH, 0x30FFFFFF);
-        Gui.drawRect(modalX + modalW - 1, modalY, modalX + modalW, modalY + modalH, 0x30FFFFFF);
-        Gui.drawRect(modalX, modalY + modalH - 1, modalX + modalW, modalY + modalH, 0x30FFFFFF);
+        RenderUtil.drawBorder(modalX, modalY, modalW, modalH, 1, 0x30FFFFFF);
 
-        // Título do Mod no cabeçalho
-        fontRendererObj.drawStringWithShadow("§f§l" + mod.getDisplayName().toUpperCase() + " §8OPTIONS", modalX + 12, modalY + 10, 0xFFFFFFFF);
+        // Titulo do Mod no cabecalho
+        fontRendererObj.drawStringWithShadow("\u00A7f\u00A7l" + mod.getDisplayName().toUpperCase() + " \u00A78OPTIONS", modalX + 12, modalY + 10, 0xFFFFFFFF);
 
-        // Botão de HUD Editor no topo à direita (se for mod HUD)
+        // Botao de HUD Editor no topo a direita (se for mod HUD)
         if (mod.isHUD()) {
             int hudX = modalX + modalW - 95;
             int hudY = modalY + 6;
             boolean hudHover = mouseX >= hudX && mouseX <= hudX + 65 && mouseY >= hudY && mouseY <= hudY + 16;
             Gui.drawRect(hudX, hudY, hudX + 65, hudY + 16, hudHover ? 0xFF0055FF : 0xFF2A2A2A);
-            drawCenteredString(fontRendererObj, "§b[✥ Mover]", hudX + 32, hudY + 4, 0xFFFFFFFF);
+            RenderUtil.drawBorder(hudX, hudY, 65, 16, 1, hudHover ? 0xFF3388FF : 0xFF383838);
+            drawCenteredString(fontRendererObj, "\u00A7b[EDITAR]", hudX + 32, hudY + 4, 0xFFFFFFFF);
         }
 
-        // Botão Fechar / Voltar (✕)
+        // Botao Fechar / Voltar (X)
         int closeX = modalX + modalW - 22;
         int closeY = modalY + 6;
         boolean closeHover = mouseX >= closeX && mouseX <= closeX + 16 && mouseY >= closeY && mouseY <= closeY + 16;
         Gui.drawRect(closeX, closeY, closeX + 16, closeY + 16, closeHover ? 0xFFAA2222 : 0xFF2A2A2A);
-        drawCenteredString(fontRendererObj, "§f✕", closeX + 8, closeY + 4, 0xFFFFFFFF);
+        drawCenteredString(fontRendererObj, "\u00A77X", closeX + 8, closeY + 4, 0xFFFFFFFF);
 
-        // Area de configuracoes com recorte de scroll
+        // Area de configuracoes
         int contentY = modalY + 34;
         int maxVisibleY = modalY + modalH - 10;
 
         if (mod.getSettings().isEmpty()) {
-            drawCenteredString(fontRendererObj, "§7Este mod não possui configurações adicionais.", width / 2, height / 2, 0xFFAAAAAA);
+            drawCenteredString(fontRendererObj, "\u00A77Este mod nao possui configuracoes adicionais.", width / 2, height / 2, 0xFFAAAAAA);
         } else {
             int curY = contentY - scrollOffset;
 
             for (ModSetting<?> setting : mod.getSettings()) {
                 if (curY + 24 > contentY && curY < maxVisibleY) {
-                    // Linha da setting
                     int rowX = modalX + 12;
                     int rowW = modalW - 24;
 
-                    // Fundo da linha suave
                     boolean rowHover = mouseX >= rowX && mouseX <= rowX + rowW && mouseY >= curY && mouseY <= curY + 22;
                     if (rowHover) {
-                        Gui.drawRect(rowX, curY, rowX + rowW, curY + 22, 0x20FFFFFF);
+                        Gui.drawRect(rowX, curY, rowX + rowW, curY + 22, 0x18FFFFFF);
                     }
 
                     // Nome da Setting
-                    fontRendererObj.drawStringWithShadow("§7" + setting.getDisplayName(), rowX + 4, curY + 7, 0xFFE0E0E0);
+                    fontRendererObj.drawStringWithShadow("\u00A77" + setting.getDisplayName(), rowX + 4, curY + 7, 0xFFE0E0E0);
 
                     int ctrlW = 100;
                     int ctrlX = rowX + rowW - ctrlW - 2;
@@ -111,14 +107,14 @@ public class ModSettingsScreen extends GuiScreen {
                         boolean on = bs.isEnabled();
 
                         // Seletor estilo CheatBreaker: < ON > ou < OFF >
-                        drawCenteredString(fontRendererObj, on ? "§8< §a§lON §8>" : "§8< §cOFF §8>", ctrlX + ctrlW / 2, ctrlY + 4, 0xFFFFFFFF);
+                        drawCenteredString(fontRendererObj, on ? "\u00A78< \u00A7a\u00A7lON \u00A78>" : "\u00A78< \u00A7cOFF \u00A78>", ctrlX + ctrlW / 2, ctrlY + 4, 0xFFFFFFFF);
 
                     } else if (setting instanceof ModeSetting) {
                         ModeSetting ms = (ModeSetting) setting;
                         String val = ms.getValue();
                         if (val.length() > 14) val = val.substring(0, 12) + "..";
 
-                        drawCenteredString(fontRendererObj, "§8< §b" + val + " §8>", ctrlX + ctrlW / 2, ctrlY + 4, 0xFFFFFFFF);
+                        drawCenteredString(fontRendererObj, "\u00A78< \u00A7b" + val + " \u00A78>", ctrlX + ctrlW / 2, ctrlY + 4, 0xFFFFFFFF);
 
                     } else if (setting instanceof NumberSetting) {
                         NumberSetting ns = (NumberSetting) setting;
@@ -137,7 +133,7 @@ public class ModSettingsScreen extends GuiScreen {
                         Gui.drawRect(handleX - 3, sliderY - 3, handleX + 3, sliderY + 5, 0xFFFFFFFF);
                         Gui.drawRect(handleX - 2, sliderY - 2, handleX + 2, sliderY + 4, 0xFF0055FF);
 
-                        // Valor numérico à direita
+                        // Valor numerico
                         String valStr = String.format("%.1f", ns.getValue());
                         if (ns.getIncrement() == 1.0) valStr = String.valueOf(ns.getIntValue());
                         fontRendererObj.drawStringWithShadow(valStr, sliderX + sliderW + 5, ctrlY + 4, 0xFFFFFFFF);
@@ -148,11 +144,11 @@ public class ModSettingsScreen extends GuiScreen {
 
                         // Quadrado colorido
                         Gui.drawRect(ctrlX + 30, ctrlY + 2, ctrlX + 46, ctrlY + 14, cVal);
-                        Gui.drawRect(ctrlX + 30, ctrlY + 2, ctrlX + 46, ctrlY + 3, 0xFFFFFFFF);
+                        RenderUtil.drawBorder(ctrlX + 30, ctrlY + 2, 16, 12, 1, 0xFFFFFFFF);
 
-                        // Hex string e botão (+)
+                        // Hex string
                         String hex = String.format("#%06X", cVal & 0xFFFFFF);
-                        fontRendererObj.drawStringWithShadow("§7" + hex + " §a(+)", ctrlX + 50, ctrlY + 4, 0xFFFFFFFF);
+                        fontRendererObj.drawStringWithShadow("\u00A77" + hex + " \u00A7a(+)", ctrlX + 50, ctrlY + 4, 0xFFFFFFFF);
                     }
                 }
 
@@ -194,7 +190,7 @@ public class ModSettingsScreen extends GuiScreen {
         int modalX = width / 2 - modalW / 2;
         int modalY = height / 2 - modalH / 2;
 
-        // Botão Fechar (✕)
+        // Botao Fechar (X)
         int closeX = modalX + modalW - 22;
         int closeY = modalY + 6;
         if (mouseX >= closeX && mouseX <= closeX + 16 && mouseY >= closeY && mouseY <= closeY + 16) {
@@ -203,7 +199,7 @@ public class ModSettingsScreen extends GuiScreen {
             return;
         }
 
-        // Botão Mover no HUD Editor
+        // Botao Mover no HUD Editor
         if (mod.isHUD()) {
             int hudX = modalX + modalW - 95;
             int hudY = modalY + 6;

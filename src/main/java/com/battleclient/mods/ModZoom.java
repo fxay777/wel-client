@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.NumberSetting;
@@ -18,11 +18,11 @@ public class ModZoom extends BaseMod {
     private boolean isZooming = false;
 
     public ModZoom() {
-        super("zoom", "Zoom", "Aproximação suave da visão estilo Optifine segurando a tecla C", "Gameplay");
+        super("zoom", "Zoom", "Aproximacao suave da visao estilo Optifine segurando a tecla C", "Gameplay");
         instance = this;
 
-        zoomFactor = new NumberSetting("factor", "Fator de Aproximação", 3.0, 1.5, 6.0, 0.5);
-        smoothCamera = new BooleanSetting("smooth", "Câmera Cinemática ao Zoomar", true);
+        zoomFactor = new NumberSetting("factor", "Fator de Aproximacao", 3.0, 1.5, 6.0, 0.5);
+        smoothCamera = new BooleanSetting("smooth", "Câmera Cinematica ao Zoomar", true);
 
         addSetting(zoomFactor);
         addSetting(smoothCamera);

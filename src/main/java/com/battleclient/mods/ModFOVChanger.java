@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.NumberSetting;
@@ -12,7 +12,7 @@ public class ModFOVChanger extends BaseMod {
     private final NumberSetting staticFOV;
 
     public ModFOVChanger() {
-        super("fovchanger", "FOV Changer", "Personaliza o campo de visão (FOV) e desativa alterações bruscas de velocidade", "Gameplay");
+        super("fovchanger", "FOV Changer", "Personaliza o campo de visao (FOV) e desativa alteracoes bruscas de velocidade", "Gameplay");
         instance = this;
 
         disableSpeedModifier = new BooleanSetting("noSpeedFOV", "Travar FOV na Corrida/Velocidade", true);

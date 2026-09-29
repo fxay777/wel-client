@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 
@@ -8,10 +8,10 @@ public class ModShinyPots extends BaseMod {
     private final BooleanSetting splashOnly;
 
     public ModShinyPots() {
-        super("shinypots", "Shiny Pots", "Adiciona brilho de encantamento reluzente em frascos de poção", "Visual");
+        super("shinypots", "Shiny Pots", "Adiciona brilho de encantamento reluzente em frascos de pocao", "Visual");
         instance = this;
 
-        splashOnly = new BooleanSetting("splashOnly", "Apenas Poções Arremessáveis", true);
+        splashOnly = new BooleanSetting("splashOnly", "Apenas Pocoes Arremessaveis", true);
         addSetting(splashOnly);
     }
 

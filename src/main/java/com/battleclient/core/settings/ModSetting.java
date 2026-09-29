@@ -1,4 +1,4 @@
-package com.battleclient.core.settings;
+﻿package com.battleclient.core.settings;
 
 public abstract class ModSetting<T> {
     private final String id;

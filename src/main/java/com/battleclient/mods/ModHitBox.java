@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -20,7 +20,7 @@ public class ModHitBox extends BaseMod {
     private final BooleanSetting playersOnly;
 
     public ModHitBox() {
-        super("hitbox", "HitBox", "Renderiza a caixa de colisão (hitbox) e linha de visão das entidades", "Visual");
+        super("hitbox", "HitBox", "Renderiza a caixa de colisao (hitbox) e linha de visao das entidades", "Visual");
         instance = this;
 
         boxColor = new ColorSetting("color", "Cor da HitBox", 0xFF0055FF);

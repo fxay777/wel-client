@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -11,7 +11,7 @@ public class ModServerAddress extends BaseMod {
     private final ColorSetting textColor;
 
     public ModServerAddress() {
-        super("serveraddress", "Server Address", "Exibe o endereço do servidor conectado no HUD", "HUD");
+        super("serveraddress", "Server Address", "Exibe o endereco do servidor conectado no HUD", "HUD");
         this.x = 10;
         this.y = 326;
         this.width = 70;

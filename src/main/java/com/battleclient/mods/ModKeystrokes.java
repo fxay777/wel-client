@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -35,18 +35,18 @@ public class ModKeystrokes extends BaseMod {
     private final List<Long> rightClicks = new ArrayList<>();
 
     public ModKeystrokes() {
-        super("keystrokes", "Keystrokes", "Exibe as teclas pressionadas na tela (WASD, Mouse com CPS, Espaço e Sneak)", "HUD");
+        super("keystrokes", "Keystrokes", "Exibe as teclas pressionadas na tela (WASD, Mouse com CPS, Espaco e Sneak)", "HUD");
         instance = this;
         this.x = 10;
         this.y = 80;
         this.width = 66;
         this.height = 70;
 
-        showMouse = new BooleanSetting("mouse", "Show Mouse Buttons", "Exibir botões LMB e RMB", true);
-        showCPS = new BooleanSetting("showCPS", "Show CPS on Mouse", "Exibir número de CPS nos botões do mouse", true);
-        showSpace = new BooleanSetting("space", "Show Spacebar", "Exibir barra de espaço", true);
+        showMouse = new BooleanSetting("mouse", "Show Mouse Buttons", "Exibir botoes LMB e RMB", true);
+        showCPS = new BooleanSetting("showCPS", "Show CPS on Mouse", "Exibir numero de CPS nos botoes do mouse", true);
+        showSpace = new BooleanSetting("space", "Show Spacebar", "Exibir barra de espaco", true);
         showSneak = new BooleanSetting("sneak", "Show Sneak (Shift)", "Exibir tecla de agachar (Shift)", false);
-        chroma = new BooleanSetting("chroma", "Chroma (Rainbow)", "Efeito arco-íris dinâmico", false);
+        chroma = new BooleanSetting("chroma", "Chroma (Rainbow)", "Efeito arco-iris dinâmico", false);
         outline = new BooleanSetting("outline", "Outline Borders", "Contorno destacado nas teclas", true);
 
         pressedBgColor = new ColorSetting("pressedBg", "Pressed Background", "Cor de fundo ao pressionar", 0x900055FF);
@@ -144,7 +144,7 @@ public class ModKeystrokes extends BaseMod {
             nextY += mouseH + gap;
         }
 
-        // Barra de espaço
+        // Barra de espaco
         if (showSpace.isEnabled()) {
             int spaceWidth = keySize * 3 + gap * 2;
             drawKey(renderX, nextY, spaceWidth, 12, "—", null, jumpDown);

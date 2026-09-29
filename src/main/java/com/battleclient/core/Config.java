@@ -1,4 +1,4 @@
-package com.battleclient.core;
+﻿package com.battleclient.core;
 
 import com.battleclient.core.settings.ColorSetting;
 import com.battleclient.core.settings.ModeSetting;

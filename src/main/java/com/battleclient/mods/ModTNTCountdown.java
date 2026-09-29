@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.ColorSetting;
 import net.minecraft.client.gui.FontRenderer;

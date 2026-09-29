@@ -1,4 +1,4 @@
-package com.battleclient.gui;
+﻿package com.battleclient.gui;
 
 import com.battleclient.core.Config;
 import com.battleclient.core.ModManager;
@@ -22,7 +22,12 @@ public class ModMenuScreen extends GuiScreen {
     @Override
     public void initGui() {
         Keyboard.enableRepeatEvents(true);
-        searchField = new GuiTextField(0, fontRendererObj, width / 2 - 100, 38, 200, 16);
+
+        int modalW = 440;
+        int modalX = width / 2 - modalW / 2;
+        int modalY = height / 2 - 145;
+
+        searchField = new GuiTextField(0, fontRendererObj, modalX + modalW - 130, modalY + 38, 120, 16);
         searchField.setMaxStringLength(32);
         searchField.setFocused(false);
     }
@@ -53,105 +58,120 @@ public class ModMenuScreen extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        // Fundo escuro com desfoque/transparencia
         drawDefaultBackground();
 
-        // Barra Superior Principal (Estilo CheatBreaker / Lunar)
-        Gui.drawRect(0, 0, width, 32, 0xF5101010);
-        Gui.drawRect(0, 31, width, 32, 0xFF0055FF);
+        int modalW = 440;
+        int modalH = 290;
+        int modalX = width / 2 - modalW / 2;
+        int modalY = height / 2 - modalH / 2;
 
-        // Branding
-        fontRendererObj.drawStringWithShadow("§9§lBATTLE §f§lCLIENT", 16, 12, 0xFFFFFFFF);
+        // Fundo principal da janela modal (estilo CheatBreaker / Lunar)
+        Gui.drawRect(modalX, modalY, modalX + modalW, modalY + modalH, 0xF2121212);
+        RenderUtil.drawBorder(modalX, modalY, modalW, modalH, 1, 0x30FFFFFF);
 
-        // Abas de categorias centralizadas no topo
-        int catStartX = width / 2 - (categories.length * 60) / 2;
+        // Barra de topo da janela (Top Bar)
+        Gui.drawRect(modalX, modalY, modalX + modalW, modalY + 30, 0xFF191919);
+        Gui.drawRect(modalX, modalY + 29, modalX + modalW, modalY + 30, 0xFF0055FF);
+
+        // Logo / Nome do Client
+        fontRendererObj.drawStringWithShadow("\u00A79\u00A7lBATTLE \u00A7fCLIENT", modalX + 12, modalY + 11, 0xFFFFFFFF);
+
+        // Botao HUD EDITOR no topo da janela
+        int hudBtnX = modalX + modalW - 125;
+        int hudBtnY = modalY + 6;
+        boolean hudHover = mouseX >= hudBtnX && mouseX <= hudBtnX + 90 && mouseY >= hudBtnY && mouseY <= hudBtnY + 18;
+        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 90, hudBtnY + 18, hudHover ? 0xFF0055FF : 0xFF242424);
+        RenderUtil.drawBorder(hudBtnX, hudBtnY, 90, 18, 1, hudHover ? 0xFF3388FF : 0xFF383838);
+        drawCenteredString(fontRendererObj, "\u00A7bHUD EDITOR", hudBtnX + 45, hudBtnY + 5, 0xFFFFFFFF);
+
+        // Botao Fechar (X)
+        int closeX = modalX + modalW - 24;
+        int closeY = modalY + 7;
+        boolean closeHover = mouseX >= closeX && mouseX <= closeX + 16 && mouseY >= closeY && mouseY <= closeY + 16;
+        Gui.drawRect(closeX, closeY, closeX + 16, closeY + 16, closeHover ? 0xFFAA2222 : 0xFF242424);
+        drawCenteredString(fontRendererObj, "\u00A77X", closeX + 8, closeY + 4, 0xFFFFFFFF);
+
+        // Sub-Barra de Categorias (Pilulas / Abas)
+        int catStartX = modalX + 12;
+        int catY = modalY + 38;
         for (int i = 0; i < categories.length; i++) {
             String cat = categories[i];
-            int cx = catStartX + (i * 60);
+            int cw = fontRendererObj.getStringWidth(cat) + 12;
             boolean isSelected = cat.equalsIgnoreCase(selectedCategory);
-            boolean isHovered = mouseX >= cx && mouseX <= cx + 55 && mouseY >= 8 && mouseY <= 24;
+            boolean isHovered = mouseX >= catStartX && mouseX <= catStartX + cw && mouseY >= catY && mouseY <= catY + 16;
 
-            if (isSelected) {
-                Gui.drawRect(cx, 8, cx + 55, 24, 0xFF0055FF);
-            } else if (isHovered) {
-                Gui.drawRect(cx, 8, cx + 55, 24, 0x400055FF);
-            }
+            int catBg = isSelected ? 0xFF0055FF : (isHovered ? 0xFF2A2A2A : 0xFF1C1C1C);
+            Gui.drawRect(catStartX, catY, catStartX + cw, catY + 16, catBg);
+            RenderUtil.drawBorder(catStartX, catY, cw, 16, 1, isSelected ? 0xFF3388FF : 0xFF282828);
 
-            drawCenteredString(fontRendererObj, isSelected ? "§f§l" + cat : "§7" + cat, cx + 27, 12, 0xFFFFFFFF);
+            drawCenteredString(fontRendererObj, isSelected ? "\u00A7f\u00A7l" + cat : "\u00A77" + cat, catStartX + cw / 2, catY + 4, 0xFFFFFFFF);
+            catStartX += cw + 4;
         }
 
-        // Botão HUD EDITOR destacado no topo direito
-        int hudBtnX = width - 135;
-        int hudBtnY = 6;
-        boolean hudHover = mouseX >= hudBtnX && mouseX <= hudBtnX + 120 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20;
-        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 120, hudBtnY + 20, hudHover ? 0xFF0077FF : 0xFF1E1E1E);
-        Gui.drawRect(hudBtnX, hudBtnY, hudBtnX + 120, hudBtnY + 1, 0xFF0055FF);
-        drawCenteredString(fontRendererObj, "§b§l[✥] HUD EDITOR", hudBtnX + 60, hudBtnY + 6, 0xFFFFFFFF);
-
-        // Barra de pesquisa
+        // Barra de Pesquisa
+        searchField.xPosition = modalX + modalW - 130;
+        searchField.yPosition = modalY + 38;
         searchField.drawTextBox();
         if (searchField.getText().isEmpty() && !searchField.isFocused()) {
-            drawCenteredString(fontRendererObj, "§8Pesquisar mod...", width / 2, 42, 0xFF888888);
+            fontRendererObj.drawString("\u00A78Pesquisar...", searchField.xPosition + 6, searchField.yPosition + 4, 0xFF888888);
         }
 
-        // Lista de mods
+        // Linha divisoria antes da lista
+        Gui.drawRect(modalX + 10, modalY + 59, modalX + modalW - 10, modalY + 60, 0xFF222222);
+
+        // Area de Grid de Mods (2 Colunas perfeitas dentro da janela modal)
         List<BaseMod> filteredMods = getFilteredMods();
 
-        int listY = 64;
-        int cardWidth = 230;
-        int cardHeight = 44;
-        int spacing = 8;
-        int totalCols = Math.max(1, Math.min(2, width / (cardWidth + spacing)));
-        int gridStartX = width / 2 - ((cardWidth * totalCols) + (spacing * (totalCols - 1))) / 2;
+        int listY = modalY + 66;
+        int cardWidth = 200;
+        int cardHeight = 36;
+        int spacing = 6;
+        int gridStartX = modalX + 12;
+        int maxVisibleY = modalY + modalH - 8;
 
         int row = 0;
         int col = 0;
 
         for (BaseMod mod : filteredMods) {
-            int cardX = gridStartX + (col * (cardWidth + spacing));
+            int cardX = gridStartX + (col * (cardWidth + spacing + 6));
             int cardY = listY + (row * (cardHeight + spacing)) - scrollOffset;
 
-            // Só desenha se estiver dentro dos limites da tela visível
-            if (cardY + cardHeight > 58 && cardY < height - 10) {
+            // Renderiza apenas se estiver dentro da area visivel da janela
+            if (cardY + cardHeight > listY && cardY < maxVisibleY) {
                 boolean isEnabled = mod.isEnabled();
                 boolean cardHover = mouseX >= cardX && mouseX <= cardX + cardWidth && mouseY >= cardY && mouseY <= cardY + cardHeight;
 
-                // Fundo do card
-                Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + cardHeight, isEnabled ? 0xB5121212 : 0x900C0C0C);
-                Gui.drawRect(cardX, cardY, cardX + 3, cardY + cardHeight, isEnabled ? 0xFF0055FF : 0xFF333333);
+                // Fundo do Card
+                int cardBg = isEnabled ? 0xFF1C1C1C : 0xFF161616;
+                if (cardHover) cardBg = isEnabled ? 0xFF222222 : 0xFF1A1A1A;
+                Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + cardHeight, cardBg);
 
-                if (cardHover) {
-                    Gui.drawRect(cardX, cardY, cardX + cardWidth, cardY + 1, 0x400055FF);
-                }
+                // Borda e barra de destaque
+                RenderUtil.drawBorder(cardX, cardY, cardWidth, cardHeight, 1, isEnabled ? 0x600055FF : 0xFF252525);
+                Gui.drawRect(cardX, cardY, cardX + 2, cardY + cardHeight, isEnabled ? 0xFF0055FF : 0xFF353535);
 
-                // Nome do mod e badge de categoria
-                fontRendererObj.drawStringWithShadow(mod.getDisplayName(), cardX + 10, cardY + 8, isEnabled ? 0xFFFFFFFF : 0xFFAAAAAA);
-                fontRendererObj.drawStringWithShadow("§8[§9" + mod.getCategory() + "§8]", cardX + 10 + fontRendererObj.getStringWidth(mod.getDisplayName()) + 5, cardY + 8, 0xFF888888);
+                // Nome do Mod
+                fontRendererObj.drawStringWithShadow(mod.getDisplayName(), cardX + 8, cardY + 7, isEnabled ? 0xFFFFFFFF : 0xFF999999);
 
-                // Descrição curta
-                String desc = mod.getDescription();
-                if (fontRendererObj.getStringWidth(desc) > 140) {
-                    desc = fontRendererObj.trimStringToWidth(desc, 135) + "...";
-                }
-                fontRendererObj.drawStringWithShadow("§7" + desc, cardX + 10, cardY + 22, 0xFF777777);
+                // Categoria e descricao sutil
+                String categoryLabel = "\u00A78" + mod.getCategory();
+                fontRendererObj.drawString(categoryLabel, cardX + 8, cardY + 20, 0xFF777777);
 
-                // Botão de Engrenagem (Settings)
-                int gearX = cardX + cardWidth - 54;
-                int gearY = cardY + 12;
-                boolean gearHover = mouseX >= gearX && mouseX <= gearX + 20 && mouseY >= gearY && mouseY <= gearY + 20;
-                Gui.drawRect(gearX, gearY, gearX + 20, gearY + 20, gearHover ? 0xFF0055FF : 0xFF222222);
-                drawCenteredString(fontRendererObj, "§f⚙", gearX + 10, gearY + 6, 0xFFFFFFFF);
+                // Botao de Configuracoes (Gear Icon)
+                int gearX = cardX + cardWidth - 52;
+                int gearY = cardY + 10;
+                boolean gearHover = mouseX >= gearX && mouseX <= gearX + 16 && mouseY >= gearY && mouseY <= gearY + 16;
+                RenderUtil.drawGearIcon(gearX, gearY, gearHover);
 
-                // Botão Switch ON / OFF
+                // Toggle Switch moderno estilo iOS / Lunar Client
                 int switchX = cardX + cardWidth - 30;
                 int switchY = cardY + 12;
-                boolean switchHover = mouseX >= switchX && mouseX <= switchX + 24 && mouseY >= switchY && mouseY <= switchY + 20;
-                int switchBg = isEnabled ? 0xFF0055FF : (switchHover ? 0xFF353535 : 0xFF1C1C1C);
-                Gui.drawRect(switchX, switchY, switchX + 24, switchY + 20, switchBg);
-                drawCenteredString(fontRendererObj, isEnabled ? "§a✓" : "§c✕", switchX + 12, switchY + 6, 0xFFFFFFFF);
+                RenderUtil.drawToggleSwitch(switchX, switchY, isEnabled);
             }
 
             col++;
-            if (col >= totalCols) {
+            if (col >= 2) {
                 col = 0;
                 row++;
             }
@@ -180,55 +200,73 @@ public class ModMenuScreen extends GuiScreen {
         super.mouseClicked(mouseX, mouseY, mouseButton);
         searchField.mouseClicked(mouseX, mouseY, mouseButton);
 
-        // Clique no botão HUD EDITOR
-        int hudBtnX = width - 135;
-        int hudBtnY = 6;
-        if (mouseX >= hudBtnX && mouseX <= hudBtnX + 120 && mouseY >= hudBtnY && mouseY <= hudBtnY + 20) {
+        int modalW = 440;
+        int modalH = 290;
+        int modalX = width / 2 - modalW / 2;
+        int modalY = height / 2 - modalH / 2;
+
+        // Clique no Botao HUD EDITOR
+        int hudBtnX = modalX + modalW - 125;
+        int hudBtnY = modalY + 6;
+        if (mouseX >= hudBtnX && mouseX <= hudBtnX + 90 && mouseY >= hudBtnY && mouseY <= hudBtnY + 18) {
             mc.displayGuiScreen(new HUDEditorScreen());
             return;
         }
 
-        // Clique nas abas de categorias
-        int catStartX = width / 2 - (categories.length * 60) / 2;
+        // Clique no Botao Fechar (X)
+        int closeX = modalX + modalW - 24;
+        int closeY = modalY + 7;
+        if (mouseX >= closeX && mouseX <= closeX + 16 && mouseY >= closeY && mouseY <= closeY + 16) {
+            Config.salvar();
+            mc.displayGuiScreen(null);
+            return;
+        }
+
+        // Clique nas Abas de Categorias
+        int catStartX = modalX + 12;
+        int catY = modalY + 38;
         for (int i = 0; i < categories.length; i++) {
-            int cx = catStartX + (i * 60);
-            if (mouseX >= cx && mouseX <= cx + 55 && mouseY >= 8 && mouseY <= 24) {
+            String cat = categories[i];
+            int cw = fontRendererObj.getStringWidth(cat) + 12;
+            if (mouseX >= catStartX && mouseX <= catStartX + cw && mouseY >= catY && mouseY <= catY + 16) {
                 selectedCategory = categories[i];
                 scrollOffset = 0;
                 return;
             }
+            catStartX += cw + 4;
         }
 
-        // Clique nos cards de mods
+        // Clique nos Cards de Mods
         List<BaseMod> filteredMods = getFilteredMods();
-        int listY = 64;
-        int cardWidth = 230;
-        int cardHeight = 44;
-        int spacing = 8;
-        int totalCols = Math.max(1, Math.min(2, width / (cardWidth + spacing)));
-        int gridStartX = width / 2 - ((cardWidth * totalCols) + (spacing * (totalCols - 1))) / 2;
+        int listY = modalY + 66;
+        int cardWidth = 200;
+        int cardHeight = 36;
+        int spacing = 6;
+        int gridStartX = modalX + 12;
+        int maxVisibleY = modalY + modalH - 8;
 
         int row = 0;
         int col = 0;
 
         for (BaseMod mod : filteredMods) {
-            int cardX = gridStartX + (col * (cardWidth + spacing));
+            int cardX = gridStartX + (col * (cardWidth + spacing + 6));
             int cardY = listY + (row * (cardHeight + spacing)) - scrollOffset;
 
-            if (cardY + cardHeight > 58 && cardY < height - 10) {
-                int gearX = cardX + cardWidth - 54;
-                int gearY = cardY + 12;
+            if (cardY + cardHeight > listY && cardY < maxVisibleY) {
+                int gearX = cardX + cardWidth - 52;
+                int gearY = cardY + 10;
                 int switchX = cardX + cardWidth - 30;
                 int switchY = cardY + 12;
 
-                // Engrenagem (Abrir Settings do Mod)
-                if (mouseX >= gearX && mouseX <= gearX + 20 && mouseY >= gearY && mouseY <= gearY + 20) {
+                // Engrenagem (Abrir Settings)
+                if (mouseX >= gearX && mouseX <= gearX + 16 && mouseY >= gearY && mouseY <= gearY + 16) {
                     mc.displayGuiScreen(new ModSettingsScreen(this, mod));
                     return;
                 }
 
-                // Switch ON/OFF ou Card
-                if (mouseX >= switchX && mouseX <= switchX + 24 && mouseY >= switchY && mouseY <= switchY + 20) {
+                // Switch ou clique no card
+                if (mouseX >= switchX && mouseX <= switchX + 24 && mouseY >= switchY && mouseY <= switchY + 12 ||
+                    mouseX >= cardX && mouseX <= cardX + cardWidth - 56 && mouseY >= cardY && mouseY <= cardY + cardHeight) {
                     mod.toggle();
                     Config.salvar();
                     return;
@@ -236,7 +274,7 @@ public class ModMenuScreen extends GuiScreen {
             }
 
             col++;
-            if (col >= totalCols) {
+            if (col >= 2) {
                 col = 0;
                 row++;
             }

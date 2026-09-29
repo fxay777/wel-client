@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 
@@ -8,10 +8,10 @@ public class ModPackOrganizer extends BaseMod {
     private final BooleanSetting fastLoad;
 
     public ModPackOrganizer() {
-        super("packorganizer", "Pack Organizer", "Otimiza a organização e troca rápida de Texture Packs", "Utility");
+        super("packorganizer", "Pack Organizer", "Otimiza a organizacao e troca rapida de Texture Packs", "Utility");
         instance = this;
 
-        fastLoad = new BooleanSetting("fastLoad", "Carregamento Rápido de Texturas", true);
+        fastLoad = new BooleanSetting("fastLoad", "Carregamento Rapido de Texturas", true);
         addSetting(fastLoad);
     }
 

@@ -1,4 +1,4 @@
-package com.battleclient.core.settings;
+﻿package com.battleclient.core.settings;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 
@@ -9,13 +9,13 @@ public class ModTabEditor extends BaseMod {
     private final BooleanSetting hideHeaderFooter;
 
     public ModTabEditor() {
-        super("tabeditor", "Tab Editor", "Personaliza a lista de jogadores (TAB), ping numérico e cabeçalho", "HUD");
+        super("tabeditor", "Tab Editor", "Personaliza a lista de jogadores (TAB), ping numerico e cabecalho", "HUD");
         instance = this;
         this.width = 120;
         this.height = 30;
 
-        showNumericPing = new BooleanSetting("numPing", "Mostrar Ping Numérico (ms)", true);
-        hideHeaderFooter = new BooleanSetting("hideHeader", "Ocultar Cabeçalho/Rodapé", false);
+        showNumericPing = new BooleanSetting("numPing", "Mostrar Ping Numerico (ms)", true);
+        hideHeaderFooter = new BooleanSetting("hideHeader", "Ocultar Cabecalho/Rodape", false);
 
         addSetting(showNumericPing);
         addSetting(hideHeaderFooter);

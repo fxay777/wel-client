@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.NumberSetting;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -13,7 +13,7 @@ public class ModLighting extends BaseMod {
         super("lighting", "Fullbright", "Permite enxergar perfeitamente no escuro sem precisar de tochas", "Visual");
         instance = this;
 
-        brightness = new NumberSetting("gamma", "Nível de Brilho", 10.0, 1.0, 15.0, 1.0);
+        brightness = new NumberSetting("gamma", "Nivel de Brilho", 10.0, 1.0, 15.0, 1.0);
         addSetting(brightness);
     }
 

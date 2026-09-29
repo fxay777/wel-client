@@ -1,4 +1,4 @@
-package com.battleclient.core;
+﻿package com.battleclient.core;
 
 import com.battleclient.mods.BaseMod;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;

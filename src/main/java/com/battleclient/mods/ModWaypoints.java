@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -37,7 +37,7 @@ public class ModWaypoints extends BaseMod {
         instance = this;
 
         showDistance = new BooleanSetting("distance", "Exibir Distância em Metros", true);
-        defaultColor = new ColorSetting("color", "Cor Padrão", 0xFF0055FF);
+        defaultColor = new ColorSetting("color", "Cor Padrao", 0xFF0055FF);
 
         addSetting(showDistance);
         addSetting(defaultColor);

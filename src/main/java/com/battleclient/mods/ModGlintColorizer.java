@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -16,7 +16,7 @@ public class ModGlintColorizer extends BaseMod {
         instance = this;
 
         glintColor = new ColorSetting("color", "Cor do Brilho", 0xFF0055FF);
-        chroma = new BooleanSetting("chroma", "Efeito Arco-íris (Chroma)", false);
+        chroma = new BooleanSetting("chroma", "Efeito Arco-iris (Chroma)", false);
 
         addSetting(glintColor);
         addSetting(chroma);

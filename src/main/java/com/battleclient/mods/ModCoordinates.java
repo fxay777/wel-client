@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -22,7 +22,7 @@ public class ModCoordinates extends BaseMod {
     private final NumberSetting scale;
 
     public ModCoordinates() {
-        super("coords", "Coordinates", "Exibe coordenadas X, Y, Z e direção com layout limpo e configurável", "HUD");
+        super("coords", "Coordinates", "Exibe coordenadas X, Y, Z e direcao com layout limpo e configuravel", "HUD");
         instance = this;
         this.x = 4;
         this.y = 4;
@@ -31,11 +31,11 @@ public class ModCoordinates extends BaseMod {
 
         showCoordinates = new BooleanSetting("showCoords", "Coordinates", "Exibir coordenadas", true);
         hideYCoordinate = new BooleanSetting("hideY", "Hide Y Coordinate", "Ocultar coordenada Y", false);
-        mode = new ModeSetting("mode", "Mode", "Estilo de exibição", 0, "Vertical", "Horizontal");
-        showDirection = new BooleanSetting("showDir", "Direction", "Exibir direção cardeal (N, S, L, O)", true);
+        mode = new ModeSetting("mode", "Mode", "Estilo de exibicao", 0, "Vertical", "Horizontal");
+        showDirection = new BooleanSetting("showDir", "Direction", "Exibir direcao cardeal (N, S, L, O)", true);
         showMarkers = new BooleanSetting("showMarkers", "Show Markers", "Exibir marcadores de eixo (+ / -)", true);
         coordsColor = new ColorSetting("coordsColor", "Coordinates Color", "Cor das coordenadas", 0xFFFFFFFF);
-        directionColor = new ColorSetting("dirColor", "Direction Color", "Cor dos marcadores de direção", 0xFFFFFFFF);
+        directionColor = new ColorSetting("dirColor", "Direction Color", "Cor dos marcadores de direcao", 0xFFFFFFFF);
         showBackground = new BooleanSetting("bg", "Background Box", "Exibir caixa de fundo escuro", false);
         scale = new NumberSetting("scale", "Scale", "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
 
@@ -58,7 +58,7 @@ public class ModCoordinates extends BaseMod {
         int yCoord = (int) Math.floor(mc.thePlayer.posY);
         int zCoord = (int) Math.floor(mc.thePlayer.posZ);
 
-        // Direção cardeal e marcador (+ / -)
+        // Direcao cardeal e marcador (+ / -)
         int facing = MathHelper.floor_double((double) (mc.thePlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
         String dirLetter = "N"; // 0: S, 1: W, 2: N, 3: E no vanilla
         String marker = "+";
@@ -92,7 +92,7 @@ public class ModCoordinates extends BaseMod {
         int dColor = directionColor.getValue();
 
         if (mode.is("Vertical")) {
-            // Estilo idêntico à Print 1 e Print 4:
+            // Estilo identico à Print 1 e Print 4:
             // X: -260   +
             // Y: 4      N
             // Z: 568

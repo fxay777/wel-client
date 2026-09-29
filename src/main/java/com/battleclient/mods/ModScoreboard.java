@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.NumberSetting;
@@ -11,14 +11,14 @@ public class ModScoreboard extends BaseMod {
     private final NumberSetting backgroundAlpha;
 
     public ModScoreboard() {
-        super("scoreboard", "Scoreboard", "Personaliza a sidebar/scoreboard (remove números vermelhos e ajusta transparência)", "HUD");
+        super("scoreboard", "Scoreboard", "Personaliza a sidebar/scoreboard (remove numeros vermelhos e ajusta transparencia)", "HUD");
         instance = this;
         this.x = 0;
         this.y = 0;
         this.width = 100;
         this.height = 100;
 
-        hideRedNumbers = new BooleanSetting("hideNumbers", "Ocultar Números Vermelhos", true);
+        hideRedNumbers = new BooleanSetting("hideNumbers", "Ocultar Numeros Vermelhos", true);
         hideScoreboard = new BooleanSetting("hideAll", "Ocultar Scoreboard Inteiro", false);
         backgroundAlpha = new NumberSetting("alpha", "Opacidade do Fundo", 0.35, 0.0, 1.0, 0.05);
 

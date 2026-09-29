@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.NumberSetting;
 
@@ -8,10 +8,10 @@ public class ModHurtCam extends BaseMod {
     private final NumberSetting intensity;
 
     public ModHurtCam() {
-        super("hurtcam", "HurtCam", "Ajusta ou desativa a oscilação da câmera ao receber dano em combate", "Visual");
+        super("hurtcam", "HurtCam", "Ajusta ou desativa a oscilacao da câmera ao receber dano em combate", "Visual");
         instance = this;
 
-        intensity = new NumberSetting("intensity", "Intensidade da Trepidação", 0.0, 0.0, 1.0, 0.1);
+        intensity = new NumberSetting("intensity", "Intensidade da Trepidacao", 0.0, 0.0, 1.0, 0.1);
         addSetting(intensity);
     }
 

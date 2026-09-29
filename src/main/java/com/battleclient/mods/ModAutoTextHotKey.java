@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import net.minecraft.client.settings.KeyBinding;
@@ -13,13 +13,13 @@ public class ModAutoTextHotKey extends BaseMod {
     private KeyBinding hubKey;
 
     public ModAutoTextHotKey() {
-        super("autotext", "Auto Text / HotKey", "Envia comandos rápidos (/hub, /play) com apenas um clique", "Utility");
+        super("autotext", "Auto Text / HotKey", "Envia comandos rapidos (/hub, /play) com apenas um clique", "Utility");
         instance = this;
 
         sendHub = new BooleanSetting("hub", "Ativar Atalho /hub (Tecla K)", true);
         addSetting(sendHub);
 
-        hubKey = new KeyBinding("Comando Rápido /hub", Keyboard.KEY_K, "Battle Client");
+        hubKey = new KeyBinding("Comando Rapido /hub", Keyboard.KEY_K, "Battle Client");
         ClientRegistry.registerKeyBinding(hubKey);
     }
 

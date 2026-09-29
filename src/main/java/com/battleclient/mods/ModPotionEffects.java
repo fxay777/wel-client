@@ -1,4 +1,4 @@
-package com.battleclient.mods;
+﻿package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -32,23 +32,23 @@ public class ModPotionEffects extends BaseMod {
     private final ColorSetting textColor;
 
     public ModPotionEffects() {
-        super("potions", "Potion Effects", "Exibe efeitos de poções ativos com ícones e durações no estilo CheatBreaker/Lunar", "HUD");
+        super("potions", "Potion Effects", "Exibe efeitos de pocoes ativos com icones e duracoes no estilo CheatBreaker/Lunar", "HUD");
         instance = this;
         this.x = 4;
         this.y = 80;
         this.width = 90;
         this.height = 40;
 
-        showIcons = new BooleanSetting("showIcons", "Show Icons", "Exibir ícones das poções", true);
+        showIcons = new BooleanSetting("showIcons", "Show Icons", "Exibir icones das pocoes", true);
         showNames = new BooleanSetting("showNames", "Show Effect Name", "Exibir nome do efeito", true);
         showDuration = new BooleanSetting("showDuration", "Show Duration", "Exibir tempo restante", true);
         textShadow = new BooleanSetting("textShadow", "Text Shadow", "Sombra nos textos", true);
         blinkLowDuration = new BooleanSetting("blink", "Blink Options", "Piscar quando estiver acabando (< 10s)", true);
         excludePermanent = new BooleanSetting("excludePerm", "Exclude Permanent Effects", "Ocultar efeitos permanentes/infinitos", false);
         showBackground = new BooleanSetting("bg", "Background Box", "Exibir caixa de fundo escuro", false);
-        effectSpacing = new NumberSetting("spacing", "Effect Spacing", "Espaçamento vertical entre os efeitos", 4.0, 0.0, 12.0, 1.0);
+        effectSpacing = new NumberSetting("spacing", "Effect Spacing", "Espacamento vertical entre os efeitos", 4.0, 0.0, 12.0, 1.0);
         scale = new NumberSetting("scale", "Scale", "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
-        textColor = new ColorSetting("color", "Text Color", "Cor padrão do texto", 0xFFFFFFFF);
+        textColor = new ColorSetting("color", "Text Color", "Cor padrao do texto", 0xFFFFFFFF);
 
         addSetting(showIcons);
         addSetting(showNames);
@@ -91,7 +91,7 @@ public class ModPotionEffects extends BaseMod {
         int totalH = effectsToRender.size() * (itemH + spacing) - spacing;
         int maxW = 80;
 
-        // Calcula largura máxima para a bounding box do HUD
+        // Calcula largura maxima para a bounding box do HUD
         for (PotionEffect pe : effectsToRender) {
             Potion potion = Potion.potionTypes[pe.getPotionID()];
             if (potion == null) continue;
@@ -118,7 +118,7 @@ public class ModPotionEffects extends BaseMod {
             Potion potion = Potion.potionTypes[pe.getPotionID()];
             if (potion == null) continue;
 
-            // Piscar se duração < 10 segundos (200 ticks)
+            // Piscar se duracao < 10 segundos (200 ticks)
             if (blinkLowDuration.isEnabled() && pe.getDuration() <= 200) {
                 int blinkSpeed = pe.getDuration() <= 100 ? 5 : 10;
                 if ((pe.getDuration() / blinkSpeed) % 2 == 0) {
@@ -129,7 +129,7 @@ public class ModPotionEffects extends BaseMod {
 
             int textX = renderX;
 
-            // Renderiza o ícone oficial da poção
+            // Renderiza o icone oficial da pocao
             if (showIcons.isEnabled() && potion.hasStatusIcon()) {
                 GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
                 mc.getTextureManager().bindTexture(INVENTORY_TEXTURE);
@@ -154,7 +154,7 @@ public class ModPotionEffects extends BaseMod {
             if (showNames.isEnabled() && showDuration.isEnabled()) {
                 // Duas linhas empilhadas (estilo Lunar/CheatBreaker)
                 mc.fontRendererObj.drawString(name, textX, curY + 1, color, shadow);
-                mc.fontRendererObj.drawString("§7" + dur, textX, curY + 10, 0xFFAAAAAA, shadow);
+                mc.fontRendererObj.drawString("\u00A77" + dur, textX, curY + 10, 0xFFAAAAAA, shadow);
             } else if (showNames.isEnabled()) {
                 mc.fontRendererObj.drawString(name, textX, curY + 5, color, shadow);
             } else if (showDuration.isEnabled()) {
