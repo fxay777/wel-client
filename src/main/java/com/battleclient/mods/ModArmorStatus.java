@@ -1,65 +1,84 @@
-﻿package com.battleclient.mods;
+package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
 import com.battleclient.core.settings.ModeSetting;
 import com.battleclient.core.settings.NumberSetting;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
+/**
+ * ModArmorStatus — Lunar Client style
+ *
+ * Vertical layout (default):
+ *   [Helmet icon]    120 / 55%     ← green / yellow / red depending on durability
+ *   [Chestplate icon] 220
+ *   [Leggings icon]   42
+ *   [Boots icon]      15
+ *   [Held item icon]  64
+ */
 public class ModArmorStatus extends BaseMod {
     public static ModArmorStatus instance;
 
+    // ─── Settings ─────────────────────────────────────────────────────────────
     private final BooleanSetting showHeldItem;
+    private final BooleanSetting showIcons;
     private final BooleanSetting showDamageNumbers;
     private final BooleanSetting dynamicDamageColor;
-    private final ModeSetting textAlignment; // Left of Icon ou Right of Icon
-    private final ModeSetting damageDisplayMode; // Value, Percent
-    private final ModeSetting orientation; // Vertical ou Horizontal
+    private final BooleanSetting showPercent;       // % instead of absolute value
+    private final BooleanSetting compactMode;       // 12×12 icons, smaller text
+    private final BooleanSetting glowOnLow;         // blink when durability < 25 %
     private final BooleanSetting showBackground;
-    private final NumberSetting scale;
-    private final ColorSetting textColor;
+    private final NumberSetting  scale;
+    private final ColorSetting   textColor;
 
     public ModArmorStatus() {
-        super("armorstatus", "Armor Status", "Exibe as pecas de armadura e o item da mao com contagem e durabilidade", "HUD");
-        instance = this;
-        this.x = 10;
-        this.y = 160;
-        this.width = 50;
-        this.height = 80;
+        super("armorstatus", "Armor Status",
+              "Exibe as pecas de armadura e o item da mao com durabilidade e cores dinamicas", "HUD");
+        instance  = this;
+        this.x    = 10;
+        this.y    = 160;
+        this.width  = 54;
+        this.height = 90;
 
-        showHeldItem = new BooleanSetting("showHeld", "Show Held Item", "Exibir item segurado na mao", true);
-        showDamageNumbers = new BooleanSetting("showDamage", "Show Damage Numbers", "Exibir numero de durabilidade", true);
-        dynamicDamageColor = new BooleanSetting("dynamicColor", "Damage Dynamic Color", "Mudar cor conforme a armadura desgasta", true);
-        textAlignment = new ModeSetting("textAlign", "Text Alignment", "Posicao do texto em relacao ao icone", 0, "Esquerda", "Direita");
-        damageDisplayMode = new ModeSetting("damageMode", "Damage Display Mode", "Formato da durabilidade", 0, "Valor Restante", "Porcentagem");
-        orientation = new ModeSetting("orientation", "Orientation", "Orientacao dos itens", 0, "Vertical", "Horizontal");
-        showBackground = new BooleanSetting("bg", "Background Box", "Exibir caixa de fundo escuro", false);
-        scale = new NumberSetting("scale", "Scale", "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
-        textColor = new ColorSetting("color", "Text Color", "Cor padrao do texto", 0xFFFFFFFF);
+        showHeldItem        = new BooleanSetting("showHeld",     "Show Held Item",       "Exibir item segurado na mao", true);
+        showIcons           = new BooleanSetting("showIcons",    "Show Icons",           "Exibir icone do item", true);
+        showDamageNumbers   = new BooleanSetting("showDamage",   "Show Durability",      "Exibir numero de durabilidade", true);
+        dynamicDamageColor  = new BooleanSetting("dynamicColor", "Dynamic Color",        "Mudar cor conforme a armadura desgasta", true);
+        showPercent         = new BooleanSetting("showPercent",  "Show Percent",         "Mostrar porcentagem ao inves de valor absoluto", false);
+        compactMode         = new BooleanSetting("compact",      "Compact Mode",         "Icones 12x12 e texto menor", false);
+        glowOnLow           = new BooleanSetting("glowOnLow",    "Blink On Low Durability", "Piscar numero quando durabilidade < 25%", true);
+        showBackground      = new BooleanSetting("bg",           "Background Box",       "Exibir caixa de fundo escuro", false);
+        scale               = new NumberSetting ("scale",        "Scale",                "Tamanho do HUD", 1.0, 0.5, 2.0, 0.1);
+        textColor           = new ColorSetting  ("color",        "Text Color",           "Cor padrao do texto", 0xFFFFFFFF);
 
         addSetting(showHeldItem);
+        addSetting(showIcons);
         addSetting(showDamageNumbers);
         addSetting(dynamicDamageColor);
-        addSetting(textAlignment);
-        addSetting(damageDisplayMode);
-        addSetting(orientation);
+        addSetting(showPercent);
+        addSetting(compactMode);
+        addSetting(glowOnLow);
         addSetting(showBackground);
         addSetting(scale);
         addSetting(textColor);
     }
 
+    // ─── Render ───────────────────────────────────────────────────────────────
     @Override
     public void onRender(RenderGameOverlayEvent.Post event) {
         if (!enabled || mc.thePlayer == null) return;
 
-        ItemStack[] armor = mc.thePlayer.inventory.armorInventory;
-        ItemStack held = mc.thePlayer.getHeldItem();
+        ItemStack[] armor  = mc.thePlayer.inventory.armorInventory;
+        ItemStack   held   = mc.thePlayer.getHeldItem();
 
-        boolean isVert = orientation.is("Vertical");
-        boolean textLeft = textAlignment.is("Esquerda");
+        boolean compact    = compactMode.isEnabled();
+        int     iconSize   = compact ? 12 : 16;
+        int     rowH       = compact ? 14 : 18;
+        int     gap        = compact ? 1  : 2;
 
         float s = scale.getFloatValue();
         GlStateManager.pushMatrix();
@@ -68,81 +87,88 @@ public class ModArmorStatus extends BaseMod {
         int renderX = (int) (x / s);
         int renderY = (int) (y / s);
 
-        int count = 4 + (showHeldItem.isEnabled() && held != null ? 1 : 0);
-        int slotSize = 18;
+        // Count rows that will actually render
+        int rows = 4;
+        if (showHeldItem.isEnabled() && held != null) rows++;
 
-        int totalW = isVert ? 52 : (count * 38);
-        int totalH = isVert ? (count * slotSize) : slotSize;
+        int totalW = showIcons.isEnabled() ? (iconSize + 4 + 36) : 40;
+        int totalH = rows * rowH + (rows - 1) * gap;
 
-        this.width = (int) (totalW * s);
+        this.width  = (int) (totalW * s);
         this.height = (int) (totalH * s);
 
         if (showBackground.isEnabled()) {
-            drawHUDBox(renderX - 2, renderY - 2, totalW, totalH);
+            drawHUDBox(renderX - 2, renderY - 2, totalW + 4, totalH + 4);
         }
 
-        int curX = renderX;
         int curY = renderY;
 
-        // Capacete (3), Peitoral (2), Calcas (1), Botas (0)
+        // Helmet=3, Chestplate=2, Leggings=1, Boots=0
         for (int i = 3; i >= 0; i--) {
-            renderSlot(armor[i], curX, curY, textLeft);
-            if (isVert) curY += slotSize;
-            else curX += 38;
+            renderArmorRow(armor[i], renderX, curY, iconSize, rowH);
+            curY += rowH + gap;
         }
 
         if (showHeldItem.isEnabled() && held != null) {
-            renderSlot(held, curX, curY, textLeft);
+            renderArmorRow(held, renderX, curY, iconSize, rowH);
         }
 
         GlStateManager.popMatrix();
     }
 
-    private void renderSlot(ItemStack stack, int sx, int sy, boolean textLeft) {
+    // ─── Per-row rendering ────────────────────────────────────────────────────
+    private void renderArmorRow(ItemStack stack, int rx, int ry, int iconSize, int rowH) {
         if (stack == null) return;
 
-        int iconX = textLeft ? (sx + 32) : sx;
-        int textX = textLeft ? sx : (sx + 20);
+        // ── Icon ─────────────────────────────────────────────────────────────
+        if (showIcons.isEnabled()) {
+            GlStateManager.pushMatrix();
+            if (iconSize < 16) {
+                // Scale down from 16 → iconSize
+                float iconScale = iconSize / 16.0F;
+                GlStateManager.translate(rx, ry, 0.0F);
+                GlStateManager.scale(iconScale, iconScale, 1.0F);
+                GlStateManager.translate(-rx, -ry, 0.0F);
+            }
+            GlStateManager.enableRescaleNormal();
+            RenderHelper.enableGUIStandardItemLighting();
+            mc.getRenderItem().renderItemAndEffectIntoGUI(stack, rx, ry);
+            mc.getRenderItem().renderItemOverlays(mc.fontRendererObj, stack, rx, ry);
+            RenderHelper.disableStandardItemLighting();
+            GlStateManager.disableRescaleNormal();
+            GlStateManager.popMatrix();
+        }
 
-        // Renderiza o item
-        GlStateManager.pushMatrix();
-        GlStateManager.enableRescaleNormal();
-        RenderHelper.enableGUIStandardItemLighting();
-        mc.getRenderItem().renderItemAndEffectIntoGUI(stack, iconX, sy);
-        mc.getRenderItem().renderItemOverlays(mc.fontRendererObj, stack, iconX, sy);
-        RenderHelper.disableStandardItemLighting();
-        GlStateManager.disableRescaleNormal();
-        GlStateManager.popMatrix();
-
-        // Renderiza a durabilidade / contagem
+        // ── Durability text ───────────────────────────────────────────────────
         if (showDamageNumbers.isEnabled() && stack.isItemStackDamageable()) {
-            int max = stack.getMaxDamage();
+            int max     = stack.getMaxDamage();
             int current = max - stack.getItemDamage();
+            float ratio = (float) current / (float) max;
+
+            // Blink on low durability
+            if (glowOnLow.isEnabled() && ratio < 0.25F) {
+                // Use tick-based visibility to avoid importing System.currentTimeMillis every draw
+                long now = System.currentTimeMillis();
+                if ((now / 400L) % 2 == 0) return; // skip draw = blink
+            }
 
             String text;
-            if (damageDisplayMode.is("Porcentagem")) {
-                int pct = (int) ((current / (float) max) * 100);
-                text = pct + "%";
+            if (showPercent.isEnabled()) {
+                text = (int)(ratio * 100) + "%";
             } else {
                 text = String.valueOf(current);
             }
 
             int color = textColor.getValue();
             if (dynamicDamageColor.isEnabled()) {
-                float ratio = (float) current / (float) max;
-                if (ratio > 0.6F) color = 0xFF55FF55; // Verde
-                else if (ratio > 0.25F) color = 0xFFFFFF55; // Amarelo
-                else color = 0xFFFF5555; // Vermelho
+                if (ratio > 0.60F)      color = 0xFF55FF55; // Green
+                else if (ratio > 0.25F) color = 0xFFFFFF55; // Yellow
+                else                    color = 0xFFFF5555; // Red
             }
 
-            int strW = mc.fontRendererObj.getStringWidth(text);
-            int drawX = textLeft ? (iconX - strW - 3) : textX;
-            mc.fontRendererObj.drawStringWithShadow(text, drawX, sy + 5, color);
-        } else if (stack.stackSize > 1 && !stack.isItemStackDamageable()) {
-            String text = String.valueOf(stack.stackSize);
-            int strW = mc.fontRendererObj.getStringWidth(text);
-            int drawX = textLeft ? (iconX - strW - 3) : textX;
-            mc.fontRendererObj.drawStringWithShadow(text, drawX, sy + 5, textColor.getValue());
+            int textX = rx + (showIcons.isEnabled() ? (iconSize + 4) : 0);
+            int textY = ry + (rowH - 8) / 2;
+            mc.fontRendererObj.drawStringWithShadow(text, textX, textY, color);
         }
     }
 }

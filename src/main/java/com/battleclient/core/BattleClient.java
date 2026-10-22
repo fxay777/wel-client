@@ -1,5 +1,6 @@
-﻿package com.battleclient.core;
+package com.battleclient.core;
 
+import com.battleclient.gui.MainMenuOverlay;
 import com.battleclient.handlers.KeyInputHandler;
 import com.battleclient.handlers.RenderHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +37,7 @@ public class BattleClient {
         // Registra eventos no Forge
         MinecraftForge.EVENT_BUS.register(new RenderHandler());
         MinecraftForge.EVENT_BUS.register(new KeyInputHandler());
+        MinecraftForge.EVENT_BUS.register(new MainMenuOverlay());
         KeyInputHandler.init();
     }
 
@@ -45,7 +47,6 @@ public class BattleClient {
     }
 
     public static void registerAllMods() {
-        // Sera preenchido com a lista de todos os 44 mods
         ModRegistry.init();
     }
 }
