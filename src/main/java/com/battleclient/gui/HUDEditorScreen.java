@@ -1,4 +1,4 @@
-﻿package com.battleclient.gui;
+package com.battleclient.gui;
 
 import com.battleclient.core.Config;
 import com.battleclient.core.ModManager;

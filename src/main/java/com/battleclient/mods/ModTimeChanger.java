@@ -1,4 +1,4 @@
-﻿package com.battleclient.mods;
+package com.battleclient.mods;
 
 import com.battleclient.core.settings.ModeSetting;
 import com.battleclient.core.settings.NumberSetting;
@@ -28,7 +28,7 @@ public class ModTimeChanger extends BaseMod {
             if (preset.is("Dia (6000)")) targetTime = 6000L;
             else if (preset.is("Por do Sol (12000)")) targetTime = 12000L;
             else if (preset.is("Noite (18000)")) targetTime = 18000L;
-            else if (preset.is("Personalizado")) targetTime = (long) customTime.getValue();
+            else if (preset.is("Personalizado")) targetTime = (long) (double) customTime.getValue();
 
             mc.theWorld.setWorldTime(targetTime);
         }

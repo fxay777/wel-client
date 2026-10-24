@@ -1,4 +1,4 @@
-﻿package com.battleclient.handlers;
+package com.battleclient.handlers;
 
 import com.battleclient.core.BattleClient;
 import com.battleclient.core.ModManager;

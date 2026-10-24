@@ -1,4 +1,4 @@
-﻿package com.battleclient.mods;
+package com.battleclient.mods;
 
 import com.battleclient.core.settings.ModeSetting;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

@@ -1,4 +1,4 @@
-﻿package com.battleclient.gui;
+package com.battleclient.gui;
 
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;

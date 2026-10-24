@@ -1,7 +1,11 @@
-﻿package com.battleclient.handlers;
+package com.battleclient.handlers;
 
 import com.battleclient.core.ModManager;
 import com.battleclient.mods.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.item.EnumAction;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -61,8 +65,16 @@ public class RenderHandler {
     @SubscribeEvent
     public void onRenderHand(RenderHandEvent event) {
         if (ModAnimations.instance != null && ModAnimations.instance.isEnabled()) {
-            // Aplica transformacoes adicionais quando em blockhit
-            ModAnimations.instance.transformItemFirstPerson(0.0F, event.partialTicks);
+            Minecraft mc = Minecraft.getMinecraft();
+            EntityPlayerSP player = mc.thePlayer;
+            if (player != null) {
+                ItemStack held = player.getHeldItem();
+                // Se estiver defendendo com espada e bater (blockhit 1.7.10 real)
+                if (held != null && player.isUsingItem() && held.getItemUseAction() == EnumAction.BLOCK && ModAnimations.instance.isBlockHit()) {
+                    event.setCanceled(true);
+                    ModAnimations.instance.render17Blockhit(event.partialTicks);
+                }
+            }
         }
     }
 }

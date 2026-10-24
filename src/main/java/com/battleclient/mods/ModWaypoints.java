@@ -1,4 +1,4 @@
-﻿package com.battleclient.mods;
+package com.battleclient.mods;
 
 import com.battleclient.core.settings.BooleanSetting;
 import com.battleclient.core.settings.ColorSetting;
@@ -77,7 +77,7 @@ public class ModWaypoints extends BaseMod {
 
         GlStateManager.pushMatrix();
         GlStateManager.translate(x, y, z);
-        GlStateManager.glNormal3f(0.0F, 1.0F, 0.0F);
+        org.lwjgl.opengl.GL11.glNormal3f(0.0F, 1.0F, 0.0F);
         GlStateManager.rotate(-mc.getRenderManager().playerViewY, 0.0F, 1.0F, 0.0F);
         GlStateManager.rotate(mc.getRenderManager().playerViewX, 1.0F, 0.0F, 0.0F);
         GlStateManager.scale(-scale, -scale, scale);
